@@ -1,0 +1,21 @@
+{
+  "name": "html-css-js-vite-starter",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "github-pages": "npm run build -- --base=/html-css-js-vite-starter/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "6.4.0",
+    "gsap": "^3.13.0",
+    "nouislider": "^15.8.1"
+  },
+  "devDependencies": {
+    "sass": "1.63.6",
+    "vite": "4.4.4",
+    "vite-plugin-webfont-dl": "3.7.6"
+  }
+}

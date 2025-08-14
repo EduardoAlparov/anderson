@@ -1,0 +1,33 @@
+@use "scss/utils/mixins" as *;
+
+.input-box {
+    width: 100%;
+    min-height: 100%;
+
+    input {
+        width: 100%;
+        height: 100%;
+        padding: 1.2rem 1rem;
+
+        color: var(--color-bg-2, #272733);
+        font-family: inherit;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        outline: none;
+
+        border-radius: 0.3rem;
+        border: 1px solid #FFF;
+        background: rgba(255, 255, 255, 0.85);
+
+        @include placeholder {
+            color: var(--color-bg-2, #272733);
+            font-family: inherit;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

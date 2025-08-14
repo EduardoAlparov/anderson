@@ -1,0 +1,137 @@
+@use "scss/utils/mixins" as *;
+@use "scss/fonts.scss";
+
+// header:
+@use "scss/blocks/page-header.scss";
+@use "scss/blocks/logo.scss";
+@use "scss/blocks/link.scss";
+@use "scss/blocks/menu.scss";
+@use "scss/blocks/btn-menu.scss";
+
+// intro section:
+@use "scss/blocks/intro.scss";
+@use "scss/blocks/button.scss";
+
+// order section:
+@use "scss/blocks/order.scss";
+@use "scss/blocks/stage.scss";
+@use "scss/blocks/form-order.scss";
+@use "scss/blocks/input-box.scss";
+@use "scss/blocks/range-slider.scss";
+@use "scss/blocks/form-loader.scss";
+@use "scss/blocks/select.scss";
+
+// footer:
+@use "scss/blocks/page-footer.scss";
+@use "scss/blocks/payment.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h6 {
+    font-size: unset;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+:root {
+    /* typography: */
+    --font-family: "Lato", sans-serif;
+    --font-family-second: "Raleway", sans-serif;
+    --font-size-sm: 10px;
+
+    /* layouts: */
+    --max-container-width: 125rem;
+    --content-padding: 2rem;
+    --header-height: 17.2rem;
+
+    /* colors: */
+    --color-accent: #3e9cdc;
+    --color-accent-2: #42a9ed;
+    --color-black: #000;
+    --color-bg: rgba(16, 16, 29, 0.90);
+    --color-bg-2: #272733;
+    --color-bg-3: #2a2b30;
+    --color-bg-4: #3d4050;
+    --color-white: #fff;
+    --color-border: #6f6d7b;
+    --color-text: #bbb;
+    --color-text-2: #C3C3C3;
+
+    /* others: */
+    --transition: 0.3s ease;
+}
+
+html {
+    font-size: 8px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-margin-top: -5rem;
+
+
+    @include breakpointMF(laptop) {
+        font-size: 10px;
+        font-size: clamp(8px, 0.485vw, 25px);
+    }
+
+    @include noHighlight();
+}
+
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-2, #272733);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+[class*="__site-container"] {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding-inline: var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem),
+                var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem),
+                var(--content-padding));
+    }
+}
+
+
+._intro-padding-top {
+    padding-top: var(--header-height);
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}

@@ -1,0 +1,59 @@
+@use "scss/utils/mixins" as *;
+
+.page-footer {
+    padding-block: 3rem;
+    background-color: var(--color-bg-4, #3d4050);
+    color: var(--color-white, #fff);
+
+    &__site-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @include breakpointMF(laptop) {
+            gap: 4rem;
+        }
+    }
+
+    &__copyright {
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        em {
+            font-style: normal;
+            text-transform: uppercase;
+        }
+
+        &+hr {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__payments {
+        display: flex;
+        align-items: center;
+        gap: 3.8rem;
+
+        &:not(.page-footer__links) {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: flex;
+            }
+        }
+    }
+
+    hr {
+        background-color: var(--color-text-2, #C3C3C3);
+        height: 1.8rem;
+        width: 1px;
+        border: none;
+    }
+}

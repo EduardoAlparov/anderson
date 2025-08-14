@@ -1,0 +1,52 @@
+@use "scss/utils/mixins" as *;
+
+.payment {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+
+    &__icon {
+        width: 2.1rem;
+        height: 2rem;
+    }
+
+    &__text {
+        color: #FFF;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    &:is(:not(a)) {
+        .payment__text {
+            color: var(--color-text-2, #C3C3C3);
+        }
+    }
+
+    &:is(a) {
+        cursor: pointer;
+
+        .payment__icon {
+            transition: transform var(--transition);
+        }
+
+        .payment__text {
+            transition: color var(--transition);
+        }
+
+        @include hover {
+            .payment__icon {
+                transform: scale(1.1);
+            }
+
+            .payment__text {
+                color: var(--color-accent, #42a9ed);
+            }
+        }
+    }
+}

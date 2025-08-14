@@ -1,0 +1,102 @@
+@use "scss/utils/mixins" as *;
+
+.page-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 2000;
+
+    width: 100%;
+    background: var(--color-bg, rgba(16, 16, 29, 0.90));
+
+    &__site-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-block: 2.35rem 2.15rem;
+
+        @include breakpointMF(laptop) {
+            padding-block: 3.5rem 3.4rem;
+        }
+    }
+
+    &__menu {
+        &.menu {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: flex;
+            }
+        }
+    }
+
+    &__btn-menu {
+        &.btn-menu {
+            display: flex;
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+    }
+
+    &.page-header--fixed {
+        position: fixed;
+
+        animation: transAnim 0.4s ease-out 1 forwards;
+
+
+        @include breakpointMF(laptop) {
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        .page-header__breadcrumbs {
+            display: none;
+        }
+    }
+}
+
+@keyframes slideBodyFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnimReverse {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

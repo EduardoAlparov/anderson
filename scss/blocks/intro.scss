@@ -1,0 +1,139 @@
+@use "scss/utils/mixins" as *;
+
+.intro {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    color: var(--color-black, #000);
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        overflow: hidden;
+
+        img,
+        video {
+            display: block;
+
+            width: 100%;
+            min-height: 100%;
+
+            object-fit: cover;
+            object-position: center left;
+
+            @include breakpointMF(laptop) {
+                object-position: center right;
+            }
+        }
+    }
+
+
+    &__body {
+        position: relative;
+        z-index: 200;
+
+        display: grid;
+        align-items: center;
+        grid-auto-flow: row;
+        gap: 5rem;
+
+        @include breakpointMF(laptop) {
+            align-items: unset;
+            gap: 9rem;
+            max-width: 75%;
+            margin-top: 1rem;
+        }
+    }
+
+    &__heading {
+        font-size: 4.8rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.25;
+        text-transform: uppercase;
+
+        em {
+            font-style: normal;
+            color: var(--color-accent, #42a9ed);
+        }
+    }
+
+    &__list {
+        &>p {
+            margin-bottom: 1rem;
+        }
+
+        &>ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 2.5rem;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                width: 2.5rem;
+                height: 2.5rem;
+
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225%22%20height%3D%222%22%20viewBox%3D%220%200%205%202%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M0%200.245003H4.94V1.755H0V0.245003Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: 0.5rem 0.151rem;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                content: "";
+            }
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-style: normal;
+        line-height: normal;
+
+        &:is(p) {
+            font-weight: 700;
+        }
+
+        &:not(p) {
+            font-weight: 400;
+        }
+    }
+
+    &__cotrols {
+        display: flex;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+
+        @include breakpointMF(laptop) {
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+        }
+    }
+
+    &__link {
+        flex-basis: auto;
+
+        @include breakpointMF(laptop) {
+            flex-basis: 20rem;
+        }
+    }
+}
