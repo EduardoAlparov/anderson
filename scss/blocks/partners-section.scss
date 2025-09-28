@@ -1,0 +1,67 @@
+@use "scss/utils/mixins" as *;
+
+.partners-section {
+    padding-block: 6rem 5rem;
+    color: var(--color-red, #ee725e);
+
+    @include breakpointMF(laptop) {
+        padding-block: 4.6rem 5.2rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(12, auto);
+        grid-auto-flow: dense;
+        gap: 10px 25px;
+
+        margin-top: 1rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-inline: 10.5rem;
+        }
+    }
+
+    &__item {
+        display: grid;
+        place-items: center;
+        align-self: center;
+        justify-self: center;
+
+        max-width: max-content;
+
+        grid-column: span 3;
+
+        @include breakpointMF(laptop) {
+            grid-column: span 2;
+        }
+
+        &:nth-child(n + 5) {
+            grid-column: span 4;
+
+            @include breakpointMF(laptop) {
+                grid-column: span 2;
+            }
+        }
+
+        &:nth-child(n + 7) {
+            @include breakpointMF(laptop) {
+                grid-column: span 3;
+            }
+        }
+
+        @include breakpointMF(laptop) {
+            max-height: 9.6rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

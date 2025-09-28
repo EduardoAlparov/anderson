@@ -1,351 +1,1700 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
-  </head>
-  <body class="preload">
-    <header class="page-header">
-        <nav class="page-header__site-container">
-            <a href="/" class="page-header__logo logo">
-                <span class="logo__text">LoremIpsum.</span>
-                <span class="logo__text logo__text--accent">Net</span>
-            </a>
+    <title>Aндерсон</title>
+</head>
+<body class="preload">
+    <main>
+        <div class="page-wrapper font-size-modifaer">
+            <section class="section intro-section">
+                <div class="intro-section__site-container">
+                    <div class="intro-section__body">
+                        <h2 class="intro-section__title">
+                            <svg class="icon icon-desktop">
+                                <use xlink:href="./images/title.svg"></use>
+                            </svg>
+                            <svg class="icon icon-mobile">
+                                <use xlink:href="./images/title-m.svg"></use>
+                            </svg>
+                        </h2>
 
-            <ul class="page-header__menu menu">
-                <li class="menu__item"><a href="#" class="menu__link menu__link--active link">Бизнес</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">Цены</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">Оформить заказ</a></li>
-            </ul>
+                        <form action="" class="intro-section__form">
+                            <p class="intro-section__form-title">
+                                Получить консультацию
+                            </p>
+                            <div class="intro-section__row">
+                                <div class="intro-section__input">
+                                    <input type="tel" name="cons-tel" id="" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                                <button type="submit" class="intro-section__btn prime-btn">
+                                    Звонок
+                                </button>
+                            </div>
+                        </form>
 
-            <button class="page-header__btn-menu btn-menu" type="button">
-                <i class="btn-menu__bars" aria-hidden="true"></i>
-            </button>
-        </nav>
-    </header>
+                        <div class="intro-section__fractals">
+                            <div class="intro-section__fractal intro-section__fractal--one">
+                                16&nbsp;лет<br>
+                                опыта
+                            </div>
+                            <div class="intro-section__fractal intro-section__fractal--two">
+                                №1<br>
+                                в&nbsp;семейном<br>
+                                досуге<br>
+                            </div>
+                            <div class="intro-section__fractal intro-section__fractal--three">
+                                35<br>
+                                кафе
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <main class="page-wrapper">
-        <section class="section intro">
-            <div class="intro__background">
-                <picture>
-                    <source media="(max-width: 1024px)" type="image/webp" srcset="./images/bg-m.webp" alt="hero image"/>
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./images/bg.webp" alt="hero image"/>
-                    <source class="lazy" media="(max-width: 1024px)" src="./images/bg-m.jpg" alt="hero image">
-                    <img class="lazy" media="(min-width: 1024px)" src="./images/bg.jpg" alt="hero image">
-                </picture>
-            </div>
-            <div class="intro__site-container">
-                <div class="intro__body">
-                    <h1 class="intro__heading">
-                        <em>Lorem&nbsp;ipsum</em>
-                        dolor sit ametconsectetur
-                        <em>adipiscing</em>
-                    </h1>
+                <div class="intro-section__picture">
+                    <picture>
+                        <source media="(min-width: 1024px)" type="image/webp" srcset="./images/boy.webp" alt="image" />
+                        <source media="(max-width: 1024px)" type="image/webp" srcset="./images/boy-m.webp"
+                            alt="hero image" />
+                        <source media="(max-width: 1024px)" type="image/png" srcset="./images/boy-m.png" alt="image" />
+                        <img class="lazy" src="./images/boy.png" alt="image">
+                    </picture>
+                </div>
 
-                    <div class="intro__list">
-                        <p class="intro__text">
-                            At vero eos et accusamus et iusto odio dignissimos ducimus!
-                        </p>
+                <div class="intro-section__star">
+                    <svg class="icon">
+                        <use xlink:href="./images/star-icon.svg"></use>
+                    </svg>
+                </div>
 
-                        <ul>
-                            <li class="intro__text">
-                                Totam rem aperiam eaque ipsa
+                <div class="intro-section__logo">
+                    <svg class="icon">
+                        <use xlink:href="./images/logotype.svg"></use>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="section lead-section">
+                <div class="lead-section__site-container">
+                    <div class="lead-section__body">
+                        <h2 class="lead-section__title">
+                            Почему выбирают АндерСон?
+                        </h2>
+
+                        <ul class="lead-section__list">
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/lead/lead-icon.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    более <span>1&nbsp;млн</span><br>
+                                    довольных детей
+                                </p>
                             </li>
-                            <li class="intro__text">
-                                Sit voluptatem accusantium doloremque laudantium
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/lead/lead-icon-1.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>21&nbsp;000+</span><br>
+                                    праздников
+                                </p>
                             </li>
-                            <li class="intro__text">
-                                Sed ut perspiciatis, unde omnis iste natus error
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/lead/lead-icon-2.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>63+&nbsp;</span><br>
+                                    аниматора
+                                </p>
+                            </li>
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/lead/lead-icon-3.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>117+&nbsp;</span><br>
+                                    программ
+                                </p>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="intro__cotrols">
-                        <a href="#goto-order" class="intro__link button button--accent">
-                            заказать
-                        </a>
-                        <a href="#" target="_blank" class="intro__link button button--white">
-                            подробнее
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="goto-order" class="section order">
-            <div class="order__background">
-                <picture>
-                    <source media="(max-width: 1024px)" type="image/webp" srcset="./images/map.webp" alt="hero image"/>
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./images/map.webp" alt="hero image"/>
-                    <img class="lazy" src="./images/map.jpg" alt="hero image">
-                </picture>
-            </div>
-            <div class="order__site-container">
-                <div class="order__body">
-                    <div class="order__heading">
-                        <h2 class="order__title">
-                            Оформление <em>Заказа</em>
+                <div class="lead-section__picture">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/lead/laed-pic.webp" />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/lead/laed-pic.webp" />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./images/lead/laed-pic.png" />
+                        <img class="lazy" src="./images/lead/laed-pic.png" alt="">
+                    </picture>
+                </div>
+
+                <div class="lead-section__background">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/lead/lead-back-m.webp" />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/lead/lead-back.webp" />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./images/lead/lead-back-m.png" />
+                        <img class="lazy" src="./images/lead/lead-back.png" alt="">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="section formats-section">
+                <div class="formats-section__site-container">
+                    <div class="formats-section__heading">
+                        <h2 class="formats-section__title formats-section__title--icon">
+                            Форматы праздников
                         </h2>
-                        <p class="order__subtitle">
-                            Перед заполнением формы ознакомьтесь с нашей схемой работы!
-                        </p>
                     </div>
 
-                    <ul class="order__list">
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#pic-1"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Lorem ipsum dolor sit amet
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#pic-2"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Сonsecteturadipiscing elit
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#pic-3"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Sed do eiusmod tempor
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#pic-4"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Esse cillum dolore eu fugiat
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#pic-5"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Excepteur sint occaecat cupidatat non proident
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./images/sprite.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="formats-section__body">
+                        <div class="formats-section__list">
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body format-item__body--reverse">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Кафе АндерСон
+                                            </div>
+                                            <div class="format-item__desc">
+                                                35 локаций с игровыми зонами
+                                            </div>
+                                        </div>
 
-                    <form action="" class="order__form form-order">
-                        <div class="form-order__flex">
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__select select">
-                                    <button class="select__current" type="button">
-                                        Выберите тип системы
-                                    </button>
-                                    <div class="select__dropdown">
-                                        <ul class="select__list">
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-perspiciatis">
-                                                    <input type="radio" hidden="hidden" value="perspiciatis" name="user-select" id="radio-perspiciatis" required>
-                                                    <span class="select__text">
-                                                        Sed ut perspiciatis
-                                                    </span>
-                                                </label>
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Безопасные игровые зоны
                                             </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-enim">
-                                                    <input type="radio" hidden="hidden" value="enim" name="user-select" id="radio-enim">
-                                                    <span class="select__text">
-                                                        Nemo enim ipsam
-                                                    </span>
-                                                </label>
+                                            <li>
+                                                Детское меню
                                             </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-quidem">
-                                                    <input type="radio" hidden="hidden" value="quidem" name="user-select" id="radio-quidem">
-                                                    <span class="select__text">
-                                                        Et harum quidem
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-autem">
-                                                    <input type="radio" hidden="hidden" value="autem" name="user-select" id="radio-autem">
-                                                    <span class="select__text">
-                                                        Temporibus autem
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-rerum">
-                                                    <input type="radio" hidden="hidden" value="rerum" name="user-select" id="radio-rerum">
-                                                    <span class="select__text">
-                                                        Itaque earum rerum
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-ut">
-                                                    <input type="radio" hidden="hidden" value="ut" name="user-select" id="radio-ut">
-                                                    <span class="select__text">
-                                                        Sed ut perspiciatis
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-ipsam">
-                                                    <input type="radio" hidden="hidden" value="ipsam" name="user-select" id="radio-ipsam">
-                                                    <span class="select__text">
-                                                        Nemo enim ipsam
-                                                    </span>
-                                                </label>
+                                            <li>
+                                                Парковка
                                             </li>
                                         </ul>
                                     </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./images/formats/item-1.png" />
+                                            <img class="lazy" src="./images/formats/item-1D.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__input-box input-box">
-                                    <input type="email" class="input-box__input" placeholder="Ваш e-mail" name="user-email" required>
-                                </div>
-                            </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__input-box input-box">
-                                    <input type="text" class="input-box__input" placeholder="Ваше имя" name="user-name" required>
-                                </div>
-                            </div>
-                            <div class="form-order__item form-order__item--big">
-                                <div class="range-slider js-range-slider-double" data-min="0" data-max="100"
-                                    data-step="1">
-                                    <div class="range-slider__inputs">
-                                        <div class="range-slider__input-wrapper">
-                                            <span class="range-slider__input-pretext">
-                                                Sed ut perspiciatis, unde omnis iste natus
-                                            </span>
-                                            <input type="tel" class="range-slider__input js-numeric-input-decimals">
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Выездные праздники
+                                            </div>
+                                            <div class="format-item__desc">
+                                                На любой площадке М/МО
+                                            </div>
                                         </div>
 
-                                        <div class="range-slider__input-wrapper">
-                                            <input id="user-pers" type="tel" class="range-slider__input js-numeric-input-decimals" name="user-percente">
-                                            <span class="range-slider__input-pretext">
-                                                %
-                                            </span>
-                                        </div>
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Помощь с подбором площадки
+                                            </li>
+                                            <li>
+                                                Мероприятие под ключ
+                                            </li>
+                                            <li>
+                                                Сервис ресторанного уровня
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="range-slider__element"></div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./images/formats/item-2.png" />
+                                            <img class="lazy" src="./images/formats/item-2D.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-loader">
-                                    <label class="form-loader__label">
-                                        <svg class="icon">
-                                            <use xlink:href="./images/sprite.svg#file"></use>
-                                        </svg>
-                                        <span>
-                                            Прикрепить файл
-                                        </span>
-                                        <input class="visually-hidden form-loader__input" type="file" hidden required>
-                                    </label>
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body format-item__body--reverse">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Кейтеринг
+                                            </div>
+                                            <div class="format-item__desc">
+                                                Фуршет, банкет, торты
+                                            </div>
+                                        </div>
+
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Собственная кухня
+                                            </li>
+                                            <li>
+                                                Свежие продукты
+                                            </li>
+                                            <li>
+                                                Праздничная сервировка
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./images/formats/item-3.png" />
+                                            <img class="lazy" src="./images/formats/item-3D.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Family Day
+                                            </div>
+                                            <div class="format-item__desc">
+                                                Корпоративные праздники
+                                            </div>
+                                        </div>
+
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Для сотрудников
+                                            </li>
+                                            <li>
+                                                Большие группы
+                                            </li>
+                                            <li>
+                                                Новогодние елки
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./images/formats/item-4.png" />
+                                            <img class="lazy" src="./images/formats/item-4D.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <button class="form-order__submit button button--accent">
-                            Отправить
+            <section class="offer-section section">
+                <div class="offer-section__site-container">
+                    <form action="" class="offer-section__form">
+                        <div class="offer-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Оставьте&nbsp;заявку на&nbsp;праздник
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Получите&nbsp;персональное предложение&nbsp;в&nbsp;течени&nbsp;30&nbsp;минут
+                            </p>
+                        </div>
+                        <div class="offer-section__inputs">
+                            <div class="offer-section__inputs-box">
+                                <label for="offer-user-name-id" class="offer-section__label">Имя родителя *</label>
+                                <div class="offer-section__input-wrapper">
+                                    <input type="text" name="offer-user-name" id="offer-user-name-id" required
+                                        placeholder="Ваше имя">
+                                </div>
+                            </div>
+                            <div class="offer-section__inputs-box">
+                                <label for="offer-user-tel-id" class="offer-section__label">Телефон  *</label>
+                                <div class="offer-section__input-wrapper">
+                                    <input type="text" name="offer-user-tel" id="offer-user-tel-id" required
+                                        placeholder="+7 (999) 999-99-99">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="offer-section__btn prime-btn prime-btn--smaller">
+                                Получить
+                                предложение
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="offer-section__tarrifs">
+                        <div class="offer-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Готовые&nbsp;предложения
+                            </h2>
+                            <p class="offer-section__subtitle offer-section__subtitle--olive">
+                                Выберите&nbsp;подходящий&nbsp;вариант&nbsp;или&nbsp;создадим
+                                индивидуальную&nbsp;программу
+                            </p>
+                        </div>
+
+                        <ul class="offer-section__list">
+                            <li class="offer-section__tarriffs-item tarriff-item tarriff-item--latte">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">СТАРТ</div>
+                                        <div class="tarriff-item__price">36 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Анимационная программа 1 час
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Детское меню на выбор
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Аквагрим или блеск-тату
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Бумажная дискотека
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Фонтан из шаров
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="offer-section__tarriffs-item tarriff-item tarriff-item--bronze">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">СТАНДАРТ</div>
+                                        <div class="tarriff-item__price">40 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Все из пакета СТАРТ
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Фонтан из шаров (15 шт)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Дополнительные активности
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Бумажная дискотека
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="offer-section__tarriffs-item tarriff-item">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">КОМФОРТ </div>
+                                        <div class="tarriff-item__price">44 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Все из пакета СТАНДАРТ
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Бумажная дискотека
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Фонтан из шаров (30 шт)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Детская дискотека
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="offer-section__link prime-btn prime-btn--smaller prime-btn--olive">
+                            Создать свой пакет
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gift-section section">
+                <div class="gift-section__site-container">
+                    <div class="gift-section__body">
+                        <div class="gift-section__image">
+                            <picture>
+                                <source type="image/webp" srcset="./images/family.webp" />
+                                <img class="lazy" src="./images/family.png" alt="image">
+                            </picture>
+                        </div>
+                        <div class="gift-section__info">
+                            <h3 class="gift-section__title">
+                                При&nbsp;заказе праздника на&nbsp;50&nbsp;000&nbsp;рублей&nbsp;&mdash; проживание
+                                у&nbsp;моря
+                                7&nbsp;дней&nbsp;в
+                                <strong>подарок!</strong>
+                            </h3>
+
+                            <a href="#" class="gift-section__link prime-btn prime-btn--smaller">
+                                Подробности акции
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="working-section section">
+                <div class="working-section__site-container">
+                    <div class="working-section__heading offer-section__heading faq-section__heading">
+                        <h2 class="working-section__title formats-section__title">
+                            Как&nbsp;мы&nbsp;работаем
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Простой&nbsp;процесс&nbsp;от&nbsp;заявки&nbsp;до&nbsp;раздника
+                        </p>
+                    </div>
+
+                    <ul class="working-section__list">
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Заявка</h5>
+                            <p class="working-item__text">
+                                Оставьте заявку на&nbsp;сайте или позвоните нам. Расскажите о&nbsp;ваших пожеланиях.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Обсуждение</h5>
+                            <p class="working-item__text">
+                                Менеджер свяжется
+                                с&nbsp;вами в&nbsp;течение 30&nbsp;минут. Обсудим детали и&nbsp;составим программу.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Подготовка</h5>
+                            <p class="working-item__text">
+                                Готовим реквизит, продумываем сценарий, бронируем площадку и&nbsp;команду аниматоров.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Праздник</h5>
+                            <p class="working-item__text">
+                                В&nbsp;назначенный день проводим незабываемый праздник для вашего ребенка!
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div class="working-section__red-box tarriff-item tarriff-item--bronze">
+                        <h5>Готовы&nbsp;начать планирование?</h5>
+                        <p>
+                            Получите 3000 подарочных
+                            бонусов на праздник
+                        </p>
+                        <a href="#" class="working-section__link tarriff-item__button format-item__button">
+                            Получить 3000 бонусов
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section section">
+                <div class="gallery-section__site-container">
+                    <div class="gallery-section__heading offer-section__heading faq-section__heading">
+                        <h2 class="working-section__title offer-section__title formats-section__title">
+                            Галерея&nbsp;наших праздников
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Посмотрите,&nbsp;как&nbsp;проходят&nbsp;наши&nbsp;мероприятия
+                        </p>
+                    </div>
+
+                    <div class="gallery-section__body">
+
+                        <form action="" class="gallery-section__navigation">
+                            <input checked type="radio" name="gallery-navigation" id="gallery-navigation-photo">
+                            <label for="gallery-navigation-photo" class="gallery-section__label">
+                                Фотографии
+                            </label>
+
+                            <input type="radio" name="gallery-navigation" id="gallery-navigation-video">
+                            <label for="gallery-navigation-video" class="gallery-section__label">
+                                Видео
+                            </label>
+                        </form>
+
+                        <ul class="gallery-section__list">
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-1.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-2.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-4.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-3.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-5.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-2.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-1.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-4.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-3.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-5.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-4.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-2.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-1.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-3.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-5.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-3.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-4.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-2.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-1.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-5.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-5.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-3.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-4.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-2.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./images/gallery/image-1.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./images/gallery/icon-back.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="request-section section">
+                <div class="request-section__site-container">
+                    <div class="request-section__heading faq-section__heading">
+                        <h2 class="request-section__title formats-section__title">
+                            Оставьте&nbsp;заявку на&nbsp;праздник
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Получите&nbsp;персональное предложение&nbsp;в&nbsp;течение&nbsp;30&nbsp;минут
+                        </p>
+                    </div>
+
+                    <form class="request-section__body">
+                        <ul class="request-section__list">
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-name-id" class="offer-section__label">Имя родителя
+                                        *</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="text" name="request-user-name" id="request-user-name-id" required
+                                            placeholder="Ваше имя">
+                                    </div>
+                                </div>
+
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-tel-id" class="offer-section__label">Телефон *</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="text" name="request-user-tel" id="request-user-tel-id" required
+                                            placeholder="+7 (999) 999-99-99">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-date-id" class="offer-section__label">Дата
+                                        праздника</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="date" name="request-user-date" id="request-user-date-id">
+                                    </div>
+                                </div>
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label class="offer-section__label">
+                                        Количество детей
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <div class="catalog-window__select select select--white js-select">
+                                            <button class="select__current" type="button">Выберите количество</button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__list">
+                                                    <li class="select__item select__item--first-hidden">
+                                                        <label class="select__label" for="radio-select-count-1">
+                                                            <input checked type="radio" name="count-select"
+                                                                id="radio-select-count-1">
+                                                            <span class="select__text">
+                                                                Выберите количество
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-2">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-2">
+                                                            <span class="select__text">
+                                                                5
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-3">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-3">
+                                                            <span class="select__text">
+                                                                10
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-4">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-4">
+                                                            <span class="select__text">
+                                                                15
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label class="offer-section__label">
+                                        Бюджет
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <div class="catalog-window__select select select--white js-select">
+                                            <button class="select__current" type="button">Выбери бюджет</button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__list">
+                                                    <li class="select__item select__item--first-hidden">
+                                                        <label class="select__label" for="radio-select-budget-1">
+                                                            <input checked type="radio" name="budget-select"
+                                                                id="radio-select-budget-1">
+                                                            <span class="select__text">
+                                                                Выбери бюджет
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-2">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-2">
+                                                            <span class="select__text">
+                                                                15 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-3">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-3">
+                                                            <span class="select__text">
+                                                                25 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-4">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-4">
+                                                            <span class="select__text">
+                                                                50 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-tel-id" class="offer-section__label">
+                                        Комментарии и пожелания
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <textarea maxlength="500" name="request-user-comment"
+                                            id="request-user-comment-id"
+                                            placeholder="Расскажите о ваших пожеланиях к празднику..."></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="submit" class="request-section__submit prime-btn prime-btn--smaller">
+                            Получить предложение
                         </button>
                     </form>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="safety-section section">
+                <div class="safety-section__site-container">
+                    <div class="safety-section__body">
+                        <div class="safety-section__heading offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Безопасность
+                                превыше&nbsp;всего
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Мы&nbsp;заботимся&nbsp;о&nbsp;здоровье
+                                и&nbsp;безопасности&nbsp;ваших&nbsp;детей
+                            </p>
+                        </div>
+
+                        <ul class="safety-section__list">
+                            <li class="safety-section__item">
+                                <h5>Эко-материалы</h5>
+                                <p>
+                                    Используем&nbsp;только
+                                    безопасные
+                                    и&nbsp;экологичные
+                                    материалы
+                                    для&nbsp;декораций
+                                    и&nbsp;реквизита
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Медкнижки аниматоров</h5>
+                                <p>
+                                    Все&nbsp;аниматоры
+                                    имеют
+                                    действующие
+                                    медицинские
+                                    книжки&nbsp;и&nbsp;прививки
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Безопасный реквизит</h5>
+                                <p>
+                                    Весь&nbsp;реквизит
+                                    сертифицирован
+                                    и&nbsp;проходит
+                                    регулярную&nbsp;проверку
+                                    на&nbsp;безопасность
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Постоянный контроль</h5>
+                                <p>
+                                    Опытные&nbsp;аниматоры
+                                    следят&nbsp;за
+                                    безопасностью&nbsp;детей
+                                    на&nbsp;протяжении&nbsp;всего
+                                    праздника
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="safety-section__background">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/safety/back-m.webp" />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./images/safety/back-d.webp" />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./images/safety/back-m.png" />
+                        <img class="lazy" src="./images/safety/back-d.png" alt="">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="compliment-section section">
+                <div class="compliment-section__site-container">
+                    <div class="offer-section__heading compliment-section__heading">
+                        <h2 class="compliment-section__title offer-section__title formats-section__title">
+                            Лидер&nbsp;среди семейныхе&nbsp;кафе
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Гарантия&nbsp;качества
+                        </p>
+                    </div>
+
+                    <div class="compliment-section__body">
+                        <div class="compliment-section__left">
+                            <div class="compliment-section__red-box">
+                                <div class="compliment-section__author">
+                                    <div class="compliment-section__userpic">
+                                        <img src="./images/lider.png" alt="">
+                                    </div>
+                                    <div class="compliment-section__quote">
+                                        <p class="compliment-section__quote-text">
+                                            &laquo;Я&nbsp;хочу, чтобы для родителей подготовка была лёгкой
+                                            и&nbsp;радостной,
+                                            а&nbsp;для детей &mdash;
+                                            событием, которое они будут вспоминать с&nbsp;улыбкой через много
+                                            лет&raquo;.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="compliment-section__author-info">
+                                    <p class="compliment-section__author-name">Анастасия</p>
+                                    <p class="compliment-section__author-role">лидер «АндерСон Праздники»</p>
+                                </div>
+                            </div>
+                            <p class="compliment-section__simple-text">
+                                Анастасия и&nbsp;её&nbsp;команда возьмут на&nbsp;себя все заботы по&nbsp;организации,
+                                а&nbsp;вы&nbsp;сможете просто наслаждаться счастьем вашего ребёнка.
+                            </p>
+                        </div>
+                        <div class="compliment-section__right">
+                            <div class="compliment-section__green-box">
+                                <div class="compliment-section__green-body">
+                                    <div class="compliment-section__top">
+                                        <h6 class="compliment-section__green-title">
+                                            Получите&nbsp;больше:<br>
+                                            чек-лист&nbsp;+&nbsp;консультацию
+                                        </h6>
+                                        <p class="compliment-section__green-subtitle">
+                                            Мы подготовили для вас чек-лист <strong>«Идеальный<br> детский праздник без
+                                                стресса»:</strong>
+                                        </p>
+                                        <ul class="compliment-section__list">
+                                            <li>
+                                                Как выбрать место (дом, кафе, парк)
+                                            </li>
+                                            <li>
+                                                Топ-5 ошибок родителей при организации
+                                            </li>
+                                            <li>
+                                                Мини-план: за 2 недели, за 3 дня, за 1 день
+                                            </li>
+                                            <li>
+                                                Список must-have: торт, анимация, фото, подарки
+                                            </li>
+                                            <li>
+                                                Что точно запомнят дети (а что можно смело убрать)
+                                            </li>
+                                        </ul>
+                                        <div class="compliment-section__texts-wrapper">
+                                            <p class="compliment-section__green-subtitle">
+                                                В дополнение вы получите <strong>бесплатную консультацию:</strong> мы
+                                                обсудим ваши идеи и предложим оптимальный сценарий именно для вашего
+                                                ребёнка.
+                                            </p>
+                                            <p class="compliment-section__green-subtitle">
+                                                Оставьте номер телефона — и <strong>получите чек-лист в PDF +
+                                                    консультацию.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="tarriff-item__button format-item__button">
+                                        Хочу чек-лист и консультацию
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners-section section">
+                <div class="partners-section__site-container">
+                    <h2 class="partners-section__title formats-section__title">
+                        Нам&nbsp;доверяют
+                    </h2>
+
+                    <ul class="partners-section__list">
+                        <li class="partners-section__item">
+                            <img src="./images/partners/a101.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/hoh.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/plan.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/okko.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/fun.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/uri.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/rust.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/bala.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/read.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./images/partners/vkus.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="faq-section section">
+                <div class="faq-section__main">
+                    <div class="faq-section__site-container">
+                        <div class="offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Частые&nbsp;вопросы
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Ответы&nbsp;на&nbsp;популярные&nbsp;вопросы о&nbsp;наших&nbsp;услугах
+                            </p>
+                        </div>
+
+                        <div class="faq-section__body">
+                            <ul class="faq-section__list">
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-001" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли принести свой торт?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-001" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-002" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Есть ли скидки и акции?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-002" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-003" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли продлить время праздника?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-003" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-004" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Проводите ли праздники в будни?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-004" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-005" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Что входит в детское меню?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-005" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-006" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли изменить программу?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-006" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-007" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Что делать, если нужно отменить праздник?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-007" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-008" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Безопасно ли это для детей?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./images/n-arrow-down.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-008" class="faq-item__label"></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section__footer">
+                    <div class="faq-section__site-container">
+                        <div class="offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Не&nbsp;нашли&nbsp;ответ
+                                на&nbsp;свой&nbsp;вопрос?
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Наши&nbsp;менеджеры&nbsp;с&nbsp;радостью&nbsp;ответят
+                                на&nbsp;все&nbsp;ваши&nbsp;вопросы
+                            </p>
+                        </div>
+
+                        <div class="faq-section__links">
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-whatsapp">
+                                    <use xlink:href="./images/whatsapp-icon.svg"></use>
+                                </svg>
+                                WhatsApp
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-telegram">
+                                    <use xlink:href="./images/telegram-icon.svg"></use>
+                                </svg>
+                                Telegram
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-telephone">
+                                    <use xlink:href="./images/telephone-icon.svg"></use>
+                                </svg>
+                                Позвонить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
-    <footer class="page-footer">
-        <div class="page-footer__site-container">
-            <p class="page-footer__copyright">
-                &copy;
-                <span class="js-year"></span>
-                <em>«LoremIpsum.net»</em>
-                &nbsp;Все&nbsp;права&nbsp;защищены.
-            </p>
-
-            <hr>
-
-            <ul class="page-footer__payments">
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./images/sprite.svg#qiwi"></use>
-                    </svg>
-                    <p class="payment__text">Qiwi wallet</p>
-                </li>
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./images/sprite.svg#yamoney"></use>
-                    </svg>
-                    <p class="payment__text">Yandex Money</p>
-                </li>
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./images/sprite.svg#webmoney"></use>
-                    </svg>
-                    <p class="payment__text">Web Money</p>
-                </li>
-            </ul>
-
-            <hr>
-
-            <div class="page-footer__payments page-footer__links">
-                <a href="mailto:" class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./images/sprite.svg#mail"></use>
-                    </svg>
-                    <p class="payment__text">info@ipsum228.com</p>
-                </a>
-                <a href="mailto:" class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./images/sprite.svg#vk"></use>
-                    </svg>
-                    <p class="payment__text">Мы вконтакте</p>
-                </a>
-            </div>
-        </div>
-    </footer>
     <script type="module" src="./main.js"></script>
-  </body>
+</body>
 </html>

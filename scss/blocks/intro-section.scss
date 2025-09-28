@@ -1,0 +1,373 @@
+@use "scss/utils/mixins" as *;
+
+.intro-section {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    background-color: var(--color-olive, #babd71);
+
+    @include breakpointMF(laptop) {
+        aspect-ratio: unset;
+    }
+
+    &__site-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex-grow: 1;
+
+        padding-block: 4em 4em;
+
+        @include breakpointMF(laptop) {
+            min-height: 45rem;
+            padding-block: 5rem 3rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 200;
+
+        display: grid;
+        grid-template-areas: "is-title"
+            "is-fractals"
+            "is-form";
+        justify-self: flex-start;
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 100%;
+
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+
+        @include breakpointMF(tablet) {
+            padding-left: 3rem;
+        }
+
+        @include breakpointMF(laptop) {
+            grid-template-areas: "is-title is-fractals is-fractals"
+                "is-form is-fractals is-fractals";
+            grid-template-columns: max-content 0.5fr 0.5fr;
+            grid-template-rows: repeat(2, 0.5fr);
+            padding-left: 5rem;
+        }
+    }
+
+    &__title {
+        grid-area: is-title;
+
+        display: block;
+
+        .icon {
+            display: block;
+
+            aspect-ratio: 2.75 / 1;
+
+            &.icon-mobile {
+                width: 250px;
+                transform: translateX(-2rem);
+
+                @include breakpointMF(laptop) {
+                    display: none;
+                }
+            }
+
+            &.icon-desktop {
+                display: none;
+                width: 46.2rem;
+
+                @include breakpointMF(laptop) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__form {
+        grid-area: is-form;
+        justify-self: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+
+        max-width: min-content;
+        margin-top: auto;
+
+        @include breakpointMF(laptop) {
+            justify-self: flex-start;
+            gap: 1.5rem;
+            margin-left: 5.5rem;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        height: 32px;
+
+        @include breakpointMF(laptop) {
+            gap: 1.1rem;
+            height: 5.1rem;
+        }
+    }
+
+    &__input {
+        flex: 1 1 100%;
+        height: 100%;
+
+        &>input {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+
+            border: none;
+            border-radius: 8px;
+            outline: none;
+
+            text-align: center;
+
+            color: var(--color-red, #ee725e);
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            background-color: var(--color-latte, #fff8e7);
+            border-radius: 8px;
+            box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+
+            @include breakpointMF(laptop) {
+                padding: 1rem;
+
+                font-size: 1.8rem;
+                border-radius: 0.8rem;
+            }
+
+            @include placeholder() {
+                color: var(--color-red, #ee725e);
+                font-family: Montserrat;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                opacity: 0.5;
+
+                @include breakpointMF(laptop) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &__form-title {
+        min-width: 215px;
+
+        color: var(--color-send, #fef098);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+        text-align: center;
+        white-space: nowrap;
+
+        &::after,
+        &::before {
+            @include breakpointMF(laptop) {
+                display: inline-block;
+                content: "";
+            }
+        }
+
+        @include breakpointMF(laptop) {
+            max-width: 34.5rem;
+            font-size: 2.4rem;
+        }
+    }
+
+    &__btn {
+        height: 100%;
+    }
+
+    &__fractals {
+        grid-area: is-fractals;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: repeat(2, max-content);
+        column-gap: 1.2rem;
+
+        margin-block: 2.4rem 4rem;
+
+        width: max-content;
+
+        @include breakpointMF(laptop) {
+            place-content: center;
+            column-gap: 2.2rem;
+            margin-block: unset;
+
+            transform: translate(-30%, -15%);
+        }
+    }
+
+    &__fractal {
+        display: grid;
+        place-items: center;
+
+        color: var(--color-red, #ee725e);
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+
+        @include breakpointMF(laptop) {
+            font-size: 2.2rem;
+        }
+
+        &.intro-section__fractal--one {
+            padding: 1.8rem 1.2rem 1.3rem 1rem;
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2263%22%20height%3D%2236%22%20viewBox%3D%220%200%2063%2036%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.64475%2033L0.00012207%207.5L14.058%200L63.0001%207.5L52.5869%2036L3.64475%2033Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+
+            @include breakpointMF(laptop) {
+                padding: unset;
+                width: 12rem;
+                height: 7rem;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22121%22%20height%3D%2269%22%20viewBox%3D%220%200%20121%2069%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M6.96835%2063.0943L0%2014.3396L26.8779%200L120.453%2014.3396L100.543%2068.8302L6.96835%2063.0943Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+            }
+        }
+
+        &.intro-section__fractal--two {
+            transform: translateY(0.7rem);
+            padding: 1.2rem 1rem 1.2rem;
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2249%22%20viewBox%3D%220%200%2096%2049%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M0%202L0.499878%2041.5L83.9999%2049L95.9999%2012H54.4999L35.9999%200L0%202Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+
+            @include breakpointMF(laptop) {
+                width: 18.5rem;
+                height: 9.5rem;
+                padding: unset;
+                padding-right: 1.2rem;
+                padding-bottom: 0.5rem;
+                transform: translateY(1.3rem);
+
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22184%22%20height%3D%2294%22%20viewBox%3D%220%200%20184%2094%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M0.395996%203.8239L1.35174%2079.3459L161%2093.6855L183.943%2022.9434H104.597L69.226%200L0.395996%203.8239Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+            }
+        }
+
+        &.intro-section__fractal--three {
+            grid-column: 1 / 3;
+            justify-self: center;
+
+            transform: translate(-1.2rem, -0rem);
+            padding: 0.7rem 1rem 1rem;
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2255%22%20height%3D%2236%22%20viewBox%3D%220%200%2055%2036%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M0.00012207%2027L4.00012%200H27.0001L55.0001%2019L38.5001%2035.5L0.00012207%2027Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+
+            @include breakpointMF(laptop) {
+                width: 10.5rem;
+                height: 6.8rem;
+                padding: unset;
+                padding-bottom: 1rem;
+
+                transform: translate(-3rem, -0.5rem);
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22106%22%20height%3D%2268%22%20viewBox%3D%220%200%20106%2068%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M0.30188%2051.7484L7.94968%200.125782H51.9245L105.459%2036.4528L73.912%2068L0.30188%2051.7484Z%22%20fill%3D%22%23FEF098%22%2F%3E%0A%3C%2Fsvg%3E');
+            }
+        }
+    }
+
+    &__picture,
+    &__logo,
+    &__star {
+        position: absolute;
+    }
+
+    &__logo {
+        top: 14px;
+        left: 2.6rem;
+
+        display: grid;
+        place-items: center;
+
+        @include breakpointMF(laptop) {
+            top: 3rem;
+            left: calc(50% + 61rem);
+            transform: translate(-100%, 0);
+        }
+
+        @include breakpointMF(laptop) {
+            position: absolute;
+        }
+
+        &>svg {
+            width: 90px;
+            aspect-ratio: 2.73 / 1;
+
+            @include breakpointMF(laptop) {
+                width: 24.5rem;
+            }
+        }
+    }
+
+    &__star {
+        top: 30px;
+        right: 40px;
+
+        @include breakpointMF(laptop) {
+            top: 65%;
+            right: unset;
+            left: 35%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        &>svg {
+            width: 24px;
+            height: 31px;
+
+            @include breakpointMF(laptop) {
+                width: 5.8rem;
+                height: 7rem;
+            }
+        }
+    }
+
+    &__picture {
+        top: 43%;
+        right: 0;
+
+        width: 60%;
+        aspect-ratio: 1 / 0.82;
+        transform: translateY(-50%);
+
+        pointer-events: none;
+
+        @include breakpointMF(tablet) {
+            width: 65%;
+        }
+
+        @include breakpointMF(laptop) {
+            width: 47%;
+            transform: translateY(-12%);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

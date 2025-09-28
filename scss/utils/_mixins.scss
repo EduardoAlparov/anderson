@@ -170,7 +170,7 @@
     }
 
     @else if $class ==tablet {
-        @media only screen and (min-width: 769px) {
+        @media only screen and (min-width: 768px) {
             @content;
         }
     }
@@ -271,25 +271,7 @@
 
 @mixin aspectRatio($class) {
     @if $class ==desktop {
-        @media only screen and (max-aspect-ratio: 16/8) {
-            @content;
-        }
-    }
-
-    @else if $class ==widthDesktop {
-        @media only screen and (min-aspect-ratio: 21/9) {
-            @content;
-        }
-    }
-
-    @else if $class ==portrait {
-        @media only screen and (max-aspect-ratio: 4/3) {
-            @content;
-        }
-    }
-
-    @else if $class ==square {
-        @media only screen and (max-aspect-ratio: 4/3) {
+        @media only screen and (min-aspect-ratio: 4/3) {
             @content;
         }
     }

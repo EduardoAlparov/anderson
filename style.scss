@@ -1,29 +1,32 @@
 @use "scss/utils/mixins" as *;
 @use "scss/fonts.scss";
 
-// header:
-@use "scss/blocks/page-header.scss";
-@use "scss/blocks/logo.scss";
-@use "scss/blocks/link.scss";
-@use "scss/blocks/menu.scss";
-@use "scss/blocks/btn-menu.scss";
+// layout:
+@use "scss/blocks/page-wrapper.scss";
 
-// intro section:
-@use "scss/blocks/intro.scss";
-@use "scss/blocks/button.scss";
-
-// order section:
-@use "scss/blocks/order.scss";
-@use "scss/blocks/stage.scss";
-@use "scss/blocks/form-order.scss";
-@use "scss/blocks/input-box.scss";
-@use "scss/blocks/range-slider.scss";
-@use "scss/blocks/form-loader.scss";
+// ui:
+@use "scss/blocks/prime-btn.scss";
 @use "scss/blocks/select.scss";
 
-// footer:
-@use "scss/blocks/page-footer.scss";
-@use "scss/blocks/payment.scss";
+// all:
+@use "scss/blocks/intro-section.scss";
+@use "scss/blocks/lead-section.scss";
+@use "scss/blocks/formats-section.scss";
+@use "scss/blocks/format-item.scss";
+@use "scss/blocks/offer-section.scss";
+@use "scss/blocks/gift-section.scss";
+@use "scss/blocks/working-section.scss";
+@use "scss/blocks/working-item.scss";
+@use "scss/blocks/gallery-section.scss";
+@use "scss/blocks/image-link.scss";
+@use "scss/blocks/tarriff-item.scss";
+@use "scss/blocks/faq-section.scss";
+@use "scss/blocks/faq-item.scss";
+@use "scss/blocks/partners-section.scss";
+@use "scss/blocks/compliment-section.scss";
+@use "scss/blocks/safety-section.scss";
+@use "scss/blocks/request-section.scss";
+
 
 * {
     margin: 0;
@@ -45,22 +48,13 @@ li {
     list-style: none;
 }
 
-button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
 :root {
     /* typography: */
-    --font-family: "Lato", sans-serif;
-    --font-family-second: "Raleway", sans-serif;
     --font-size-sm: 10px;
 
     /* layouts: */
-    --max-container-width: 125rem;
-    --content-padding: 2rem;
-    --header-height: 17.2rem;
+    --max-container-width: 116rem;
+    --content-padding: 2.8rem;
 
     /* colors: */
     --color-accent: #3e9cdc;
@@ -75,51 +69,14 @@ button {
     --color-text: #bbb;
     --color-text-2: #C3C3C3;
 
+    --color-olive: #babd71; // var(--color-olive, #babd71);  -- OLIVE
+    --color-bronze: #ee725e; // var(--color-bronze, #ee725e);  -- BRONZE
+    --color-send: #fef098; // var(--color-send, #fef098);  -- SEND
+    --color-latte: #fff8e7; // var(--color-latte, #fff8e7);  -- LATTE
+    --color-light-pink: #f3bfb6; // var(--color-light-pink, #f3bfb6);  -- PINK
+
     /* others: */
     --transition: 0.3s ease;
-}
-
-html {
-    font-size: 8px;
-    line-height: 1.2;
-    box-sizing: border-box;
-    -webkit-text-size-adjust: 100%;
-    scroll-behavior: smooth;
-    scroll-margin-top: -5rem;
-
-
-    @include breakpointMF(laptop) {
-        font-size: 10px;
-        font-size: clamp(8px, 0.485vw, 25px);
-    }
-
-    @include noHighlight();
-}
-
-body {
-    font-family: var(--font-family);
-    background-color: var(--color-bg-2, #272733);
-}
-
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-}
-
-[class*="__site-container"] {
-    width: 100%;
-    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
-    margin: 0 auto;
-    padding-inline: var(--content-padding);
-
-    @supports (width: max(20vw, 100px)) {
-        padding-left: max(env(safe-area-inset-left, 1.4rem),
-                var(--content-padding));
-        padding-right: max(env(safe-area-inset-right, 1.4rem),
-                var(--content-padding));
-    }
 }
 
 

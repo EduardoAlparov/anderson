@@ -1,0 +1,37 @@
+@use "scss/utils/mixins" as *;
+
+html {
+    &:has(.font-size-modifaer) {
+        -webkit-tap-highlight-color: transparent;
+
+        body {
+            font-family: Montserrat;
+        }
+
+        font-size: 10px;
+
+        @include breakpointMF(laptop) {
+            font-size: 10px;
+            font-size: clamp(5px, 0.7vw, 25px);
+        }
+    }
+}
+
+.page-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+[class*="__site-container"] {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding-inline: var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem),
+                var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem),
+                var(--content-padding));
+    }
+}

@@ -1,0 +1,47 @@
+@use "scss/utils/mixins" as *;
+
+.prime-btn {
+    display: grid;
+    place-items: center;
+
+    padding: 10px;
+    flex-shrink: 0;
+
+    color: var(--color-latte, #fff8e7);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+
+    border-radius: 0.8rem;
+    background-color: var(--color-red, #ee725e);
+    box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    @include breakpointMF(laptop) {
+        padding: 1rem;
+        font-size: 2.2rem;
+        border-radius: 0.8rem;
+    }
+
+    &.prime-btn--smaller {
+        min-width: 172px;
+        font-weight: 700;
+
+        @include breakpointMF(laptop) {
+            min-width: 26rem;
+            height: 4.3rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    &.prime-btn--olive {
+        background-color: var(--color-olive, #babd71);
+    }
+}

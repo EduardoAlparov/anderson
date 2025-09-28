@@ -1,0 +1,97 @@
+@use "scss/utils/mixins" as *;
+
+.safety-section {
+    position: relative;
+
+    min-height: 40rem;
+    padding-block: 19px 30px;
+
+    color: var(--color-latte, #fff8e7);
+    background-color: var(--color-olive, #babd71);
+
+    @include aspectRatio(desktop) {
+        padding-block: 2rem 4rem;
+    }
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: top 0 left 20%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.8rem;
+
+        margin-top: 10px;
+
+        @include aspectRatio(desktop) {
+            margin-top: 2.1rem;
+            margin-inline: 10.1rem;
+            padding-block: 3.1rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        min-width: 125px;
+        height: 125px;
+        flex: 0 0 calc(100% / 3 - (1.8rem / 2));
+        padding: 14px 6px;
+
+        color: var(--color-olive, #babd71);
+        background-color: var(--color-latte, #fff8e7);
+        border-radius: 0.8rem;
+        box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+
+        @include aspectRatio(desktop) {
+            gap: 2rem;
+            min-height: 19.8rem;
+            max-width: 19.9rem;
+            flex: 0 1 calc(100% / 4 - (1.8rem * 3 / 4));
+            padding: 2.7rem 2.3rem 1.4rem;
+        }
+
+        &>h5 {
+            margin: 0;
+            padding: 0;
+
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 96%;
+
+            @include aspectRatio(desktop) {
+                font-size: 2rem;
+                width: min-content;
+            }
+        }
+
+        &>p {
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 96%;
+            text-align: center;
+
+            @include aspectRatio(desktop) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

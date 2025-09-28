@@ -1,0 +1,187 @@
+@use "scss/utils/mixins" as *;
+
+.gallery-section {
+    padding-block: 49px 53px;
+
+    color: var(--color-red, #ee725e);
+
+    @include breakpointMF(laptop) {
+        padding-block: 6.8rem 5.2rem;
+    }
+
+    &__navigation {
+        display: grid;
+        place-items: center;
+        grid-auto-flow: column;
+
+        width: max-content;
+        margin-top: 1.5rem;
+        margin-inline: auto;
+        padding: 0.4rem;
+
+        background-color: var(--color-latte, #fff8e7);
+        border-radius: 3rem;
+        box-shadow: 1px 1px 9px 0 rgba(0, 0, 0, 0.25);
+
+        @include breakpointMF(laptop) {
+            margin-top: 2.5rem;
+        }
+
+        &>input {
+            @include visuallyHidden();
+        }
+
+        &>input {
+            &:checked {
+                &+label {
+                    color: var(--color-latte, #fff8e7);
+                    background-color: var(--color-olive, #babd71);
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: grid;
+        place-items: center;
+
+        padding: 0.8rem 4rem;
+        height: 2.6rem;
+
+        color: var(--color-olive, #babd71);
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 96%;
+        text-align: center;
+
+        background-color: transparent;
+        border-radius: 3rem;
+
+        transition: all 0.3s ease;
+
+        @include breakpointMF(laptop) {
+            height: 4rem;
+            padding: 1rem 6rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        margin-top: 2rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.2rem;
+        }
+    }
+
+    &__item {
+        display: grid;
+        place-items: center;
+
+        @include breakpointMF(laptop) {
+            flex: 0 1 calc(100% / 3 - (1.2rem * 2 / 3));
+        }
+    }
+
+    &__carousel-wrapper {
+        position: relative;
+
+        height: 180px;
+        aspect-ratio: 1.51 / 1;
+
+        background-color: var(--color-latte, #fff8e7);
+        box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+
+        @include breakpointMF(laptop) {
+            width: 100%;
+            height: unset;
+            overflow: hidden;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__swiper-nav {
+        display: contents;
+    }
+
+    &__swiper-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 200;
+
+        flex-shrink: 0;
+        transform: translateY(-50%);
+
+        background-color: transparent;
+        border-radius: 100%;
+        border: none;
+        outline: none;
+        user-select: none;
+
+        transition: background 0.3s ease;
+        cursor: pointer;
+
+        @include breakpointMF(laptop) {
+            background-color: rgba(255, 248, 231, 0.50);
+        }
+
+        &>.icon {
+            display: block;
+            width: 3.3rem;
+            height: 3.3rem;
+
+            stroke: var(--color-bronze, #ee725e);
+            transition: stroke 0.3s ease;
+
+            @include breakpointMF(laptop) {
+                stroke: var(--color-latte, #fff8e7);
+            }
+        }
+
+        &.gallery-section__swiper-prev {
+            right: 100%;
+
+            @include breakpointMF(laptop) {
+                left: 0.3rem;
+                right: unset;
+            }
+        }
+
+        &.gallery-section__swiper-next {
+            left: 100%;
+
+            @include breakpointMF(laptop) {
+                right: 0.3rem;
+                left: unset;
+            }
+
+            &>.icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            background-color: rgba(255, 248, 231, 0.80);
+
+            &>.icon {
+                stroke: var(--color-bronze, #ee725e);
+            }
+        }
+    }
+}

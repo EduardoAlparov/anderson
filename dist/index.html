@@ -1,353 +1,1702 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABUAAAAAAAAAAAAAAAAAAAAJAAAADQAAAAcAAAAAAAAAFQAAAAAAAAACAAAAIgAAABUAAAAAAAAAAAAAAAYNERqHDRIYcQAAAAAAAAAAAAAAPQsMEooMER5lAAAAAAkJDokKDxphAAAAEAwPGKYRGCa/AAAAAAAAAAAAAAAAExkmjRQdKsUAAAAAAAAAABAQEFwQFiXOEBQifwAAAAYWHSvJCA0emAAAADAZITLfFRortgAAAAAAAAAAAAAAAA4VIZAXHyvGAAAAIQAAAAAWGR5cDRQjyhIXIowAAAAnGyMy2AkKFY0LCABZFyA06xceMI8AAAAAAAAAAAAAAAAOFSGQFx0oyAAAACUAAAAAEhIPURcfL84QFyN6AAAAWRggMOIGCBB9Fx0slhYcLcQTHDB0AAAAAAAAAAAAAAAGDBUgjB0kMsIAAABgBwoOxQcAAEYXIC/XDREedgUAAFwZITL7BQsVhBQcK6wYIDLFAAAAGwAAAAAAAAAAAAAAEhEZJKAcIjC6CwsLtBEZK/8AAACLFh4u2Q8UJHEAAABBHyg8/Q4TIOQWGietFR8wswAAAAAAAAAAAAAAAAAAAA8YICylGx8rux8nMKoWJkD/AgcUxhcdLNcLEB5sAAAAACAnOOERGCj6EBkt5xQbJHEAAAAAAAAAAAAAAAAAAAANGyMupRkdJ8EAAAbAJDFH8AwZM/MVGiXgDxYjZQAAABkaHyq5GiI49BclPPkKEySNAAAAAAAAAAAAAAAAAAAABBcdJK8NDhbVDREbwhsjMcobJjz9DhQl6h8nMmEAAAAkEBQfvR8mOqUjKzvTExst6AAAABkAAAAAAAAAAAAAACANDxXAFRwr+BcfK8YACxtvJjBC1RYgM/kRDxFlAAAAIRYdLc8QFiN7Iyw8kR4oOtcQFSS+AAAAAAAAAAAAAAARFh0n7BATHtocJjfrAAAAACozQHMaIzThDhYnoAAAAAATGinOFR0uhAAAAAAbJDSuGSEy1Q4WKmcAAAAAAAAAAC43RqoTGifKIis5jgAAAAAAAAAAIik3nBYcJn8AAAAAExglkRYeLFwAAAAA/wAAABohMJkVHChsAAAAAAAAAAAAAAAAOkVFFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AADijAAAYgwAAmAMAAIgDAACIAwAAAAMAAAAHAAAAhwAAAAcAAAADAAAAAwAACJEAAIyZAADf/wAA//8AAA==" type="image/x-icon">
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABUAAAAAAAAAAAAAAAAAAAAJAAAADQAAAAcAAAAAAAAAFQAAAAAAAAACAAAAIgAAABUAAAAAAAAAAAAAAAYNERqHDRIYcQAAAAAAAAAAAAAAPQsMEooMER5lAAAAAAkJDokKDxphAAAAEAwPGKYRGCa/AAAAAAAAAAAAAAAAExkmjRQdKsUAAAAAAAAAABAQEFwQFiXOEBQifwAAAAYWHSvJCA0emAAAADAZITLfFRortgAAAAAAAAAAAAAAAA4VIZAXHyvGAAAAIQAAAAAWGR5cDRQjyhIXIowAAAAnGyMy2AkKFY0LCABZFyA06xceMI8AAAAAAAAAAAAAAAAOFSGQFx0oyAAAACUAAAAAEhIPURcfL84QFyN6AAAAWRggMOIGCBB9Fx0slhYcLcQTHDB0AAAAAAAAAAAAAAAGDBUgjB0kMsIAAABgBwoOxQcAAEYXIC/XDREedgUAAFwZITL7BQsVhBQcK6wYIDLFAAAAGwAAAAAAAAAAAAAAEhEZJKAcIjC6CwsLtBEZK/8AAACLFh4u2Q8UJHEAAABBHyg8/Q4TIOQWGietFR8wswAAAAAAAAAAAAAAAAAAAA8YICylGx8rux8nMKoWJkD/AgcUxhcdLNcLEB5sAAAAACAnOOERGCj6EBkt5xQbJHEAAAAAAAAAAAAAAAAAAAANGyMupRkdJ8EAAAbAJDFH8AwZM/MVGiXgDxYjZQAAABkaHyq5GiI49BclPPkKEySNAAAAAAAAAAAAAAAAAAAABBcdJK8NDhbVDREbwhsjMcobJjz9DhQl6h8nMmEAAAAkEBQfvR8mOqUjKzvTExst6AAAABkAAAAAAAAAAAAAACANDxXAFRwr+BcfK8YACxtvJjBC1RYgM/kRDxFlAAAAIRYdLc8QFiN7Iyw8kR4oOtcQFSS+AAAAAAAAAAAAAAARFh0n7BATHtocJjfrAAAAACozQHMaIzThDhYnoAAAAAATGinOFR0uhAAAAAAbJDSuGSEy1Q4WKmcAAAAAAAAAAC43RqoTGifKIis5jgAAAAAAAAAAIik3nBYcJn8AAAAAExglkRYeLFwAAAAA/wAAABohMJkVHChsAAAAAAAAAAAAAAAAOkVFFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AADijAAAYgwAAmAMAAIgDAACIAwAAAAMAAAAHAAAAhwAAAAcAAAADAAAAAwAACJEAAIyZAADf/wAA//8AAA==" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
-    <script type="module" crossorigin src="./assets/index-78c3ba6b.js"></script>
-    <link rel="stylesheet" href="./assets/index-f533b872.css">
-  </head>
-  <body class="preload">
-    <header class="page-header">
-        <nav class="page-header__site-container">
-            <a href="/" class="page-header__logo logo">
-                <span class="logo__text">LoremIpsum.</span>
-                <span class="logo__text logo__text--accent">Net</span>
-            </a>
+    <title>Aндерсон</title>
+  <script type="module" crossorigin src="./assets/index-97c8acba.js"></script>
+  <link rel="stylesheet" href="./assets/index-57eb3004.css">
+</head>
+<body class="preload">
+    <main>
+        <div class="page-wrapper font-size-modifaer">
+            <section class="section intro-section">
+                <div class="intro-section__site-container">
+                    <div class="intro-section__body">
+                        <h2 class="intro-section__title">
+                            <svg class="icon icon-desktop">
+                                <use xlink:href="./assets/title-05edb1be.svg"></use>
+                            </svg>
+                            <svg class="icon icon-mobile">
+                                <use xlink:href="./assets/title-m-282fe3e1.svg"></use>
+                            </svg>
+                        </h2>
 
-            <ul class="page-header__menu menu">
-                <li class="menu__item"><a href="#" class="menu__link menu__link--active link">Бизнес</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">Цены</a></li>
-                <li class="menu__item"><a href="#" class="menu__link link">Оформить заказ</a></li>
-            </ul>
+                        <form action="" class="intro-section__form">
+                            <p class="intro-section__form-title">
+                                Получить консультацию
+                            </p>
+                            <div class="intro-section__row">
+                                <div class="intro-section__input">
+                                    <input type="tel" name="cons-tel" id="" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                                <button type="submit" class="intro-section__btn prime-btn">
+                                    Звонок
+                                </button>
+                            </div>
+                        </form>
 
-            <button class="page-header__btn-menu btn-menu" type="button">
-                <i class="btn-menu__bars" aria-hidden="true"></i>
-            </button>
-        </nav>
-    </header>
+                        <div class="intro-section__fractals">
+                            <div class="intro-section__fractal intro-section__fractal--one">
+                                16&nbsp;лет<br>
+                                опыта
+                            </div>
+                            <div class="intro-section__fractal intro-section__fractal--two">
+                                №1<br>
+                                в&nbsp;семейном<br>
+                                досуге<br>
+                            </div>
+                            <div class="intro-section__fractal intro-section__fractal--three">
+                                35<br>
+                                кафе
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <main class="page-wrapper">
-        <section class="section intro">
-            <div class="intro__background">
-                <picture>
-                    <source media="(max-width: 1024px)" type="image/webp" srcset="./assets/bg-m-a311db21.webp " alt="hero image"/>
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./assets/bg-ff39c658.webp " alt="hero image"/>
-                    <source class="lazy" media="(max-width: 1024px)" src="./assets/bg-m-e9fca6ba.jpg" alt="hero image">
-                    <img class="lazy" media="(min-width: 1024px)" src="./assets/bg-20fca923.jpg" alt="hero image">
-                </picture>
-            </div>
-            <div class="intro__site-container">
-                <div class="intro__body">
-                    <h1 class="intro__heading">
-                        <em>Lorem&nbsp;ipsum</em>
-                        dolor sit ametconsectetur
-                        <em>adipiscing</em>
-                    </h1>
+                <div class="intro-section__picture">
+                    <picture>
+                        <source media="(min-width: 1024px)" type="image/webp" srcset="./assets/boy-e67fc19a.webp " alt="image" />
+                        <source media="(max-width: 1024px)" type="image/webp" srcset="./assets/boy-m-e3d75738.webp "
+                            alt="hero image" />
+                        <source media="(max-width: 1024px)" type="image/png" srcset="./assets/boy-m-c8ec5653.png " alt="image" />
+                        <img class="lazy" src="./assets/boy-202fe186.png" alt="image">
+                    </picture>
+                </div>
 
-                    <div class="intro__list">
-                        <p class="intro__text">
-                            At vero eos et accusamus et iusto odio dignissimos ducimus!
-                        </p>
+                <div class="intro-section__star">
+                    <svg class="icon">
+                        <use xlink:href="./assets/star-icon-f7c01306.svg"></use>
+                    </svg>
+                </div>
 
-                        <ul>
-                            <li class="intro__text">
-                                Totam rem aperiam eaque ipsa
+                <div class="intro-section__logo">
+                    <svg class="icon">
+                        <use xlink:href="./assets/logotype-4b2738e6.svg"></use>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="section lead-section">
+                <div class="lead-section__site-container">
+                    <div class="lead-section__body">
+                        <h2 class="lead-section__title">
+                            Почему выбирают АндерСон?
+                        </h2>
+
+                        <ul class="lead-section__list">
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/lead-icon-df02b391.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    более <span>1&nbsp;млн</span><br>
+                                    довольных детей
+                                </p>
                             </li>
-                            <li class="intro__text">
-                                Sit voluptatem accusantium doloremque laudantium
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/lead-icon-1-3cf75fd7.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>21&nbsp;000+</span><br>
+                                    праздников
+                                </p>
                             </li>
-                            <li class="intro__text">
-                                Sed ut perspiciatis, unde omnis iste natus error
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/lead-icon-2-41a16f48.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>63+&nbsp;</span><br>
+                                    аниматора
+                                </p>
+                            </li>
+                            <li class="lead-section__item">
+                                <div class="lead-section__item-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/lead-icon-3-26ffebef.svg"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="lead-section__item-text">
+                                    <span>117+&nbsp;</span><br>
+                                    программ
+                                </p>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="intro__cotrols">
-                        <a href="#goto-order" class="intro__link button button--accent">
-                            заказать
-                        </a>
-                        <a href="#" target="_blank" class="intro__link button button--white">
-                            подробнее
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="goto-order" class="section order">
-            <div class="order__background">
-                <picture>
-                    <source media="(max-width: 1024px)" type="image/webp" srcset="./assets/map-6b306f84.webp " alt="hero image"/>
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./assets/map-6b306f84.webp " alt="hero image"/>
-                    <img class="lazy" src="./images/map.jpg" alt="hero image">
-                </picture>
-            </div>
-            <div class="order__site-container">
-                <div class="order__body">
-                    <div class="order__heading">
-                        <h2 class="order__title">
-                            Оформление <em>Заказа</em>
+                <div class="lead-section__picture">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/laed-pic-4db03f05.webp " />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/laed-pic-4db03f05.webp " />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./assets/laed-pic-4a5872c2.png " />
+                        <img class="lazy" src="./assets/laed-pic-4a5872c2.png" alt="">
+                    </picture>
+                </div>
+
+                <div class="lead-section__background">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/lead-back-m-1d55a77c.webp " />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/lead-back-6967e48b.webp " />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./assets/lead-back-m-1ecac523.png " />
+                        <img class="lazy" src="./assets/lead-back-d5fbc7b6.png" alt="">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="section formats-section">
+                <div class="formats-section__site-container">
+                    <div class="formats-section__heading">
+                        <h2 class="formats-section__title formats-section__title--icon">
+                            Форматы праздников
                         </h2>
-                        <p class="order__subtitle">
-                            Перед заполнением формы ознакомьтесь с нашей схемой работы!
-                        </p>
                     </div>
 
-                    <ul class="order__list">
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#pic-1"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Lorem ipsum dolor sit amet
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#pic-2"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Сonsecteturadipiscing elit
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#pic-3"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Sed do eiusmod tempor
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#pic-4"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Esse cillum dolore eu fugiat
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="order__item stage">
-                            <div class="stage__pic">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#pic-5"></use>
-                                </svg>
-                            </div>
-                            <p class="stage__text">
-                                Excepteur sint occaecat cupidatat non proident
-                            </p>
-                            <div class="stage__divider">
-                                <svg class="icon">
-                                    <use xlink:href="./assets/sprite-0c55cbac.svg#divider"></use>
-                                </svg>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="formats-section__body">
+                        <div class="formats-section__list">
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body format-item__body--reverse">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Кафе АндерСон
+                                            </div>
+                                            <div class="format-item__desc">
+                                                35 локаций с игровыми зонами
+                                            </div>
+                                        </div>
 
-                    <form action="" class="order__form form-order">
-                        <div class="form-order__flex">
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__select select">
-                                    <button class="select__current" type="button">
-                                        Выберите тип системы
-                                    </button>
-                                    <div class="select__dropdown">
-                                        <ul class="select__list">
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-perspiciatis">
-                                                    <input type="radio" hidden="hidden" value="perspiciatis" name="user-select" id="radio-perspiciatis" required>
-                                                    <span class="select__text">
-                                                        Sed ut perspiciatis
-                                                    </span>
-                                                </label>
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Безопасные игровые зоны
                                             </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-enim">
-                                                    <input type="radio" hidden="hidden" value="enim" name="user-select" id="radio-enim">
-                                                    <span class="select__text">
-                                                        Nemo enim ipsam
-                                                    </span>
-                                                </label>
+                                            <li>
+                                                Детское меню
                                             </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-quidem">
-                                                    <input type="radio" hidden="hidden" value="quidem" name="user-select" id="radio-quidem">
-                                                    <span class="select__text">
-                                                        Et harum quidem
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-autem">
-                                                    <input type="radio" hidden="hidden" value="autem" name="user-select" id="radio-autem">
-                                                    <span class="select__text">
-                                                        Temporibus autem
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-rerum">
-                                                    <input type="radio" hidden="hidden" value="rerum" name="user-select" id="radio-rerum">
-                                                    <span class="select__text">
-                                                        Itaque earum rerum
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-ut">
-                                                    <input type="radio" hidden="hidden" value="ut" name="user-select" id="radio-ut">
-                                                    <span class="select__text">
-                                                        Sed ut perspiciatis
-                                                    </span>
-                                                </label>
-                                            </li>
-                                            <li class="select__item select__item--first-hidden">
-                                                <label class="select__label" for="radio-ipsam">
-                                                    <input type="radio" hidden="hidden" value="ipsam" name="user-select" id="radio-ipsam">
-                                                    <span class="select__text">
-                                                        Nemo enim ipsam
-                                                    </span>
-                                                </label>
+                                            <li>
+                                                Парковка
                                             </li>
                                         </ul>
                                     </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./assets/item-1-4fb7951f.png " />
+                                            <img class="lazy" src="./assets/item-1D-fb6619aa.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__input-box input-box">
-                                    <input type="email" class="input-box__input" placeholder="Ваш e-mail" name="user-email" required>
-                                </div>
-                            </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-order__input-box input-box">
-                                    <input type="text" class="input-box__input" placeholder="Ваше имя" name="user-name" required>
-                                </div>
-                            </div>
-                            <div class="form-order__item form-order__item--big">
-                                <div class="range-slider js-range-slider-double" data-min="0" data-max="100"
-                                    data-step="1">
-                                    <div class="range-slider__inputs">
-                                        <div class="range-slider__input-wrapper">
-                                            <span class="range-slider__input-pretext">
-                                                Sed ut perspiciatis, unde omnis iste natus
-                                            </span>
-                                            <input type="tel" class="range-slider__input js-numeric-input-decimals">
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Выездные праздники
+                                            </div>
+                                            <div class="format-item__desc">
+                                                На любой площадке М/МО
+                                            </div>
                                         </div>
 
-                                        <div class="range-slider__input-wrapper">
-                                            <input id="user-pers" type="tel" class="range-slider__input js-numeric-input-decimals" name="user-percente">
-                                            <span class="range-slider__input-pretext">
-                                                %
-                                            </span>
-                                        </div>
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Помощь с подбором площадки
+                                            </li>
+                                            <li>
+                                                Мероприятие под ключ
+                                            </li>
+                                            <li>
+                                                Сервис ресторанного уровня
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="range-slider__element"></div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./assets/item-2-06974916.png " />
+                                            <img class="lazy" src="./assets/item-2D-7122ba69.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-order__item form-order__item--small">
-                                <div class="form-loader">
-                                    <label class="form-loader__label">
-                                        <svg class="icon">
-                                            <use xlink:href="./assets/sprite-0c55cbac.svg#file"></use>
-                                        </svg>
-                                        <span>
-                                            Прикрепить файл
-                                        </span>
-                                        <input class="visually-hidden form-loader__input" type="file" hidden required>
-                                    </label>
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body format-item__body--reverse">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Кейтеринг
+                                            </div>
+                                            <div class="format-item__desc">
+                                                Фуршет, банкет, торты
+                                            </div>
+                                        </div>
+
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Собственная кухня
+                                            </li>
+                                            <li>
+                                                Свежие продукты
+                                            </li>
+                                            <li>
+                                                Праздничная сервировка
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./assets/item-3-542622a0.png " />
+                                            <img class="lazy" src="./assets/item-3D-18044c1f.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="formats-section__item format-item">
+                                <div class="format-item__body">
+                                    <div class="format-item__info">
+                                        <div class="format-item__heading">
+                                            <div class="format-item__name">
+                                                Family Day
+                                            </div>
+                                            <div class="format-item__desc">
+                                                Корпоративные праздники
+                                            </div>
+                                        </div>
+
+                                        <ul class="format-item__list">
+                                            <li>
+                                                Для сотрудников
+                                            </li>
+                                            <li>
+                                                Большие группы
+                                            </li>
+                                            <li>
+                                                Новогодние елки
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="format-item__image">
+                                        <picture>
+                                            <source media="(max-width: 1024px)" srcset="./assets/item-4-ed01ba21.png " />
+                                            <img class="lazy" src="./assets/item-4D-5a071ad6.png" alt="image">
+                                        </picture>
+                                    </div>
+
+                                    <button type="button" class="format-item__button">
+                                        Узнать подробнее
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <button class="form-order__submit button button--accent">
-                            Отправить
+            <section class="offer-section section">
+                <div class="offer-section__site-container">
+                    <form action="" class="offer-section__form">
+                        <div class="offer-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Оставьте&nbsp;заявку на&nbsp;праздник
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Получите&nbsp;персональное предложение&nbsp;в&nbsp;течени&nbsp;30&nbsp;минут
+                            </p>
+                        </div>
+                        <div class="offer-section__inputs">
+                            <div class="offer-section__inputs-box">
+                                <label for="offer-user-name-id" class="offer-section__label">Имя родителя *</label>
+                                <div class="offer-section__input-wrapper">
+                                    <input type="text" name="offer-user-name" id="offer-user-name-id" required
+                                        placeholder="Ваше имя">
+                                </div>
+                            </div>
+                            <div class="offer-section__inputs-box">
+                                <label for="offer-user-tel-id" class="offer-section__label">Телефон  *</label>
+                                <div class="offer-section__input-wrapper">
+                                    <input type="text" name="offer-user-tel" id="offer-user-tel-id" required
+                                        placeholder="+7 (999) 999-99-99">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="offer-section__btn prime-btn prime-btn--smaller">
+                                Получить
+                                предложение
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="offer-section__tarrifs">
+                        <div class="offer-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Готовые&nbsp;предложения
+                            </h2>
+                            <p class="offer-section__subtitle offer-section__subtitle--olive">
+                                Выберите&nbsp;подходящий&nbsp;вариант&nbsp;или&nbsp;создадим
+                                индивидуальную&nbsp;программу
+                            </p>
+                        </div>
+
+                        <ul class="offer-section__list">
+                            <li class="offer-section__tarriffs-item tarriff-item tarriff-item--latte">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">СТАРТ</div>
+                                        <div class="tarriff-item__price">36 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Анимационная программа 1 час
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Детское меню на выбор
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Аквагрим или блеск-тату
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Бумажная дискотека
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Фонтан из шаров
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="offer-section__tarriffs-item tarriff-item tarriff-item--bronze">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">СТАНДАРТ</div>
+                                        <div class="tarriff-item__price">40 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Все из пакета СТАРТ
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Фонтан из шаров (15 шт)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Дополнительные активности
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                        <li class="tarriff-item__item tarriff-item__item--off">
+                                            Бумажная дискотека
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="offer-section__tarriffs-item tarriff-item">
+                                <div class="tarriff-item__body">
+                                    <div class="tarriff-item__top">
+                                        <div class="tarriff-item__name">КОМФОРТ </div>
+                                        <div class="tarriff-item__price">44 000₽</div>
+                                    </div>
+                                    <ul class="tarriff-item__list format-item__list">
+                                        <li class="tarriff-item__item">
+                                            Все из пакета СТАНДАРТ
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Бумажная дискотека
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Фонтан из шаров (30 шт)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Детская дискотека
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Подарки детям (тойсики)
+                                        </li>
+                                        <li class="tarriff-item__item">
+                                            Маме 1500 бонусов
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="tarriff-item__button format-item__button">
+                                        Заказать пакет
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="offer-section__link prime-btn prime-btn--smaller prime-btn--olive">
+                            Создать свой пакет
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gift-section section">
+                <div class="gift-section__site-container">
+                    <div class="gift-section__body">
+                        <div class="gift-section__image">
+                            <picture>
+                                <source type="image/webp" srcset="./assets/family-33b9ca99.webp " />
+                                <img class="lazy" src="./assets/family-abd9c868.png" alt="image">
+                            </picture>
+                        </div>
+                        <div class="gift-section__info">
+                            <h3 class="gift-section__title">
+                                При&nbsp;заказе праздника на&nbsp;50&nbsp;000&nbsp;рублей&nbsp;&mdash; проживание
+                                у&nbsp;моря
+                                7&nbsp;дней&nbsp;в
+                                <strong>подарок!</strong>
+                            </h3>
+
+                            <a href="#" class="gift-section__link prime-btn prime-btn--smaller">
+                                Подробности акции
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="working-section section">
+                <div class="working-section__site-container">
+                    <div class="working-section__heading offer-section__heading faq-section__heading">
+                        <h2 class="working-section__title formats-section__title">
+                            Как&nbsp;мы&nbsp;работаем
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Простой&nbsp;процесс&nbsp;от&nbsp;заявки&nbsp;до&nbsp;раздника
+                        </p>
+                    </div>
+
+                    <ul class="working-section__list">
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Заявка</h5>
+                            <p class="working-item__text">
+                                Оставьте заявку на&nbsp;сайте или позвоните нам. Расскажите о&nbsp;ваших пожеланиях.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Обсуждение</h5>
+                            <p class="working-item__text">
+                                Менеджер свяжется
+                                с&nbsp;вами в&nbsp;течение 30&nbsp;минут. Обсудим детали и&nbsp;составим программу.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Подготовка</h5>
+                            <p class="working-item__text">
+                                Готовим реквизит, продумываем сценарий, бронируем площадку и&nbsp;команду аниматоров.
+                            </p>
+                        </li>
+                        <li class="working-section__item working-item">
+                            <div class="working-item__counter"></div>
+                            <h5 class="working-item__name">Праздник</h5>
+                            <p class="working-item__text">
+                                В&nbsp;назначенный день проводим незабываемый праздник для вашего ребенка!
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div class="working-section__red-box tarriff-item tarriff-item--bronze">
+                        <h5>Готовы&nbsp;начать планирование?</h5>
+                        <p>
+                            Получите 3000 подарочных
+                            бонусов на праздник
+                        </p>
+                        <a href="#" class="working-section__link tarriff-item__button format-item__button">
+                            Получить 3000 бонусов
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section section">
+                <div class="gallery-section__site-container">
+                    <div class="gallery-section__heading offer-section__heading faq-section__heading">
+                        <h2 class="working-section__title offer-section__title formats-section__title">
+                            Галерея&nbsp;наших праздников
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Посмотрите,&nbsp;как&nbsp;проходят&nbsp;наши&nbsp;мероприятия
+                        </p>
+                    </div>
+
+                    <div class="gallery-section__body">
+
+                        <form action="" class="gallery-section__navigation">
+                            <input checked type="radio" name="gallery-navigation" id="gallery-navigation-photo">
+                            <label for="gallery-navigation-photo" class="gallery-section__label">
+                                Фотографии
+                            </label>
+
+                            <input type="radio" name="gallery-navigation" id="gallery-navigation-video">
+                            <label for="gallery-navigation-video" class="gallery-section__label">
+                                Видео
+                            </label>
+                        </form>
+
+                        <ul class="gallery-section__list">
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-1-b9031c61.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-2-59eb63eb.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-4-72ae13c8.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-3-2e3c92d7.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-5-2e05b166.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-2-59eb63eb.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-1-b9031c61.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-4-72ae13c8.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-3-2e3c92d7.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-5-2e05b166.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-4-72ae13c8.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-2-59eb63eb.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-1-b9031c61.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-3-2e3c92d7.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-5-2e05b166.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-3-2e3c92d7.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-4-72ae13c8.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-2-59eb63eb.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-1-b9031c61.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-5-2e05b166.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-section__item">
+                                <div class="gallery-section__carousel-wrapper js-swiper-carousel">
+                                    <div class="gallery-section__swiper swiper">
+                                        <ul class="gallery-section__swiper-wrapper swiper-wrapper">
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-5-2e05b166.png" alt="">
+                                                        <figcaption>
+                                                            Оформление праздника
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-3-2e3c92d7.jpg" alt="">
+                                                        <figcaption>
+                                                            Аквагрим
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-4-72ae13c8.png" alt="">
+                                                        <figcaption>
+                                                            Игровые зоны
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-2-59eb63eb.png" alt="">
+                                                        <figcaption>
+                                                            Праздничный стол
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+
+                                            <li class="gallery-section__swiper-slide swiper-slide">
+                                                <a href="#" class="gallery-section__image-link image-link">
+                                                    <figure>
+                                                        <img src="./assets/image-1-b9031c61.jpg" alt="">
+                                                        <figcaption>
+                                                            Анимационные программы<br> и мастер-классы
+                                                        </figcaption>
+                                                    </figure>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="gallery-section__swiper-nav">
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-prev">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="gallery-section__swiper-btn gallery-section__swiper-next">
+                                            <svg class="icon">
+                                                <use xlink:href="./assets/icon-back-5f0e12c3.svg"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="request-section section">
+                <div class="request-section__site-container">
+                    <div class="request-section__heading faq-section__heading">
+                        <h2 class="request-section__title formats-section__title">
+                            Оставьте&nbsp;заявку на&nbsp;праздник
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Получите&nbsp;персональное предложение&nbsp;в&nbsp;течение&nbsp;30&nbsp;минут
+                        </p>
+                    </div>
+
+                    <form class="request-section__body">
+                        <ul class="request-section__list">
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-name-id" class="offer-section__label">Имя родителя
+                                        *</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="text" name="request-user-name" id="request-user-name-id" required
+                                            placeholder="Ваше имя">
+                                    </div>
+                                </div>
+
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-tel-id" class="offer-section__label">Телефон *</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="text" name="request-user-tel" id="request-user-tel-id" required
+                                            placeholder="+7 (999) 999-99-99">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-date-id" class="offer-section__label">Дата
+                                        праздника</label>
+                                    <div class="offer-section__input-wrapper">
+                                        <input type="date" name="request-user-date" id="request-user-date-id">
+                                    </div>
+                                </div>
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label class="offer-section__label">
+                                        Количество детей
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <div class="catalog-window__select select select--white js-select">
+                                            <button class="select__current" type="button">Выберите количество</button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__list">
+                                                    <li class="select__item select__item--first-hidden">
+                                                        <label class="select__label" for="radio-select-count-1">
+                                                            <input checked type="radio" name="count-select"
+                                                                id="radio-select-count-1">
+                                                            <span class="select__text">
+                                                                Выберите количество
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-2">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-2">
+                                                            <span class="select__text">
+                                                                5
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-3">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-3">
+                                                            <span class="select__text">
+                                                                10
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-count-4">
+                                                            <input type="radio" name="count-select"
+                                                                id="radio-select-count-4">
+                                                            <span class="select__text">
+                                                                15
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="request-section__column">
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label class="offer-section__label">
+                                        Бюджет
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <div class="catalog-window__select select select--white js-select">
+                                            <button class="select__current" type="button">Выбери бюджет</button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__list">
+                                                    <li class="select__item select__item--first-hidden">
+                                                        <label class="select__label" for="radio-select-budget-1">
+                                                            <input checked type="radio" name="budget-select"
+                                                                id="radio-select-budget-1">
+                                                            <span class="select__text">
+                                                                Выбери бюджет
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-2">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-2">
+                                                            <span class="select__text">
+                                                                15 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-3">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-3">
+                                                            <span class="select__text">
+                                                                25 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__item">
+                                                        <label class="select__label" for="radio-select-budget-4">
+                                                            <input type="radio" name="budget-select"
+                                                                id="radio-select-budget-4">
+                                                            <span class="select__text">
+                                                                50 000 ₽
+                                                            </span>
+                                                            <svg aria-hidden="true" class="icon select__tick">
+                                                                <use xlink:href="#bx-check"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="request-section__inputs-box offer-section__inputs-box">
+                                    <label for="request-user-tel-id" class="offer-section__label">
+                                        Комментарии и пожелания
+                                    </label>
+                                    <div class="offer-section__input-wrapper">
+                                        <textarea maxlength="500" name="request-user-comment"
+                                            id="request-user-comment-id"
+                                            placeholder="Расскажите о ваших пожеланиях к празднику..."></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="submit" class="request-section__submit prime-btn prime-btn--smaller">
+                            Получить предложение
                         </button>
                     </form>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="safety-section section">
+                <div class="safety-section__site-container">
+                    <div class="safety-section__body">
+                        <div class="safety-section__heading offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Безопасность
+                                превыше&nbsp;всего
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Мы&nbsp;заботимся&nbsp;о&nbsp;здоровье
+                                и&nbsp;безопасности&nbsp;ваших&nbsp;детей
+                            </p>
+                        </div>
+
+                        <ul class="safety-section__list">
+                            <li class="safety-section__item">
+                                <h5>Эко-материалы</h5>
+                                <p>
+                                    Используем&nbsp;только
+                                    безопасные
+                                    и&nbsp;экологичные
+                                    материалы
+                                    для&nbsp;декораций
+                                    и&nbsp;реквизита
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Медкнижки аниматоров</h5>
+                                <p>
+                                    Все&nbsp;аниматоры
+                                    имеют
+                                    действующие
+                                    медицинские
+                                    книжки&nbsp;и&nbsp;прививки
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Безопасный реквизит</h5>
+                                <p>
+                                    Весь&nbsp;реквизит
+                                    сертифицирован
+                                    и&nbsp;проходит
+                                    регулярную&nbsp;проверку
+                                    на&nbsp;безопасность
+                                </p>
+                            </li>
+                            <li class="safety-section__item">
+                                <h5>Постоянный контроль</h5>
+                                <p>
+                                    Опытные&nbsp;аниматоры
+                                    следят&nbsp;за
+                                    безопасностью&nbsp;детей
+                                    на&nbsp;протяжении&nbsp;всего
+                                    праздника
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="safety-section__background">
+                    <picture>
+                        <source media="(max-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/back-m-872aa6d9.webp " />
+                        <source media="(min-aspect-ratio: 4/3)" type="image/webp"
+                            srcset="./assets/back-d-2454eaf3.webp " />
+                        <source media="(max-aspect-ratio: 4/3)" srcset="./assets/back-m-8c8a640a.png " />
+                        <img class="lazy" src="./assets/back-d-fc613907.png" alt="">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="compliment-section section">
+                <div class="compliment-section__site-container">
+                    <div class="offer-section__heading compliment-section__heading">
+                        <h2 class="compliment-section__title offer-section__title formats-section__title">
+                            Лидер&nbsp;среди семейныхе&nbsp;кафе
+                        </h2>
+                        <p class="offer-section__subtitle">
+                            Гарантия&nbsp;качества
+                        </p>
+                    </div>
+
+                    <div class="compliment-section__body">
+                        <div class="compliment-section__left">
+                            <div class="compliment-section__red-box">
+                                <div class="compliment-section__author">
+                                    <div class="compliment-section__userpic">
+                                        <img src="./assets/lider-0500f75e.png" alt="">
+                                    </div>
+                                    <div class="compliment-section__quote">
+                                        <p class="compliment-section__quote-text">
+                                            &laquo;Я&nbsp;хочу, чтобы для родителей подготовка была лёгкой
+                                            и&nbsp;радостной,
+                                            а&nbsp;для детей &mdash;
+                                            событием, которое они будут вспоминать с&nbsp;улыбкой через много
+                                            лет&raquo;.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="compliment-section__author-info">
+                                    <p class="compliment-section__author-name">Анастасия</p>
+                                    <p class="compliment-section__author-role">лидер «АндерСон Праздники»</p>
+                                </div>
+                            </div>
+                            <p class="compliment-section__simple-text">
+                                Анастасия и&nbsp;её&nbsp;команда возьмут на&nbsp;себя все заботы по&nbsp;организации,
+                                а&nbsp;вы&nbsp;сможете просто наслаждаться счастьем вашего ребёнка.
+                            </p>
+                        </div>
+                        <div class="compliment-section__right">
+                            <div class="compliment-section__green-box">
+                                <div class="compliment-section__green-body">
+                                    <div class="compliment-section__top">
+                                        <h6 class="compliment-section__green-title">
+                                            Получите&nbsp;больше:<br>
+                                            чек-лист&nbsp;+&nbsp;консультацию
+                                        </h6>
+                                        <p class="compliment-section__green-subtitle">
+                                            Мы подготовили для вас чек-лист <strong>«Идеальный<br> детский праздник без
+                                                стресса»:</strong>
+                                        </p>
+                                        <ul class="compliment-section__list">
+                                            <li>
+                                                Как выбрать место (дом, кафе, парк)
+                                            </li>
+                                            <li>
+                                                Топ-5 ошибок родителей при организации
+                                            </li>
+                                            <li>
+                                                Мини-план: за 2 недели, за 3 дня, за 1 день
+                                            </li>
+                                            <li>
+                                                Список must-have: торт, анимация, фото, подарки
+                                            </li>
+                                            <li>
+                                                Что точно запомнят дети (а что можно смело убрать)
+                                            </li>
+                                        </ul>
+                                        <div class="compliment-section__texts-wrapper">
+                                            <p class="compliment-section__green-subtitle">
+                                                В дополнение вы получите <strong>бесплатную консультацию:</strong> мы
+                                                обсудим ваши идеи и предложим оптимальный сценарий именно для вашего
+                                                ребёнка.
+                                            </p>
+                                            <p class="compliment-section__green-subtitle">
+                                                Оставьте номер телефона — и <strong>получите чек-лист в PDF +
+                                                    консультацию.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="tarriff-item__button format-item__button">
+                                        Хочу чек-лист и консультацию
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners-section section">
+                <div class="partners-section__site-container">
+                    <h2 class="partners-section__title formats-section__title">
+                        Нам&nbsp;доверяют
+                    </h2>
+
+                    <ul class="partners-section__list">
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./assets/hoh-1df05ab5.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./assets/plan-5c91d2d5.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./assets/okko-79c8aa54.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="./assets/rust-f8938651.png" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                        <li class="partners-section__item">
+                            <img src="data:image/png;base64,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" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="faq-section section">
+                <div class="faq-section__main">
+                    <div class="faq-section__site-container">
+                        <div class="offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Частые&nbsp;вопросы
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Ответы&nbsp;на&nbsp;популярные&nbsp;вопросы о&nbsp;наших&nbsp;услугах
+                            </p>
+                        </div>
+
+                        <div class="faq-section__body">
+                            <ul class="faq-section__list">
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-001" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли принести свой торт?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-001" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-002" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Есть ли скидки и акции?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-002" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-003" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли продлить время праздника?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-003" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-004" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Проводите ли праздники в будни?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-004" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-005" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Что входит в детское меню?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-005" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-006" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Можно ли изменить программу?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-006" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-007" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Что делать, если нужно отменить праздник?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-007" class="faq-item__label"></label>
+                                </li>
+                                <li class="faq-section__item faq-item">
+                                    <input type="radio" name="faq-item-input" id="faq-item-008" class="faq-item__input">
+
+                                    <div class="faq-item__body">
+                                        <div class="faq-item__button">
+                                            <span class="faq-item__question">
+                                                Безопасно ли это для детей?
+                                            </span>
+
+                                            <div class="faq-item__icon">
+                                                <svg aria-hidden="true" class="icon icon-arrow">
+                                                    <use xlink:href="./assets/n-arrow-down-19ec60cf.svg"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item__dropdown">
+                                            <div class="faq-item__inner">
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                    quia suscipit aliquid quis fugit labore deleniti. Ex totam alias
+                                                    vero, eveniet autem obcaecati, perspiciatis a excepturi eos vitae,
+                                                    animi assumenda!
+                                                </p>
+                                                <p class="faq-item__text">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum natus
+                                                    labore libero dolorum, quidem dolores velit aspernatur animi
+                                                    suscipit. Quas laudantium molestiae adipisci blanditiis! Officiis
+                                                    enim mollitia maxime quam exercitationem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label for="faq-item-008" class="faq-item__label"></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section__footer">
+                    <div class="faq-section__site-container">
+                        <div class="offer-section__heading faq-section__heading">
+                            <h2 class="offer-section__title formats-section__title">
+                                Не&nbsp;нашли&nbsp;ответ
+                                на&nbsp;свой&nbsp;вопрос?
+                            </h2>
+                            <p class="offer-section__subtitle">
+                                Наши&nbsp;менеджеры&nbsp;с&nbsp;радостью&nbsp;ответят
+                                на&nbsp;все&nbsp;ваши&nbsp;вопросы
+                            </p>
+                        </div>
+
+                        <div class="faq-section__links">
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-whatsapp">
+                                    <use xlink:href="./assets/whatsapp-icon-bf75209e.svg"></use>
+                                </svg>
+                                WhatsApp
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-telegram">
+                                    <use xlink:href="./assets/telegram-icon-f347a956.svg"></use>
+                                </svg>
+                                Telegram
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer" class="faq-section__link">
+                                <svg aria-hidden="true" class="icon icon-telephone">
+                                    <use xlink:href="./assets/telephone-icon-a8a6af43.svg"></use>
+                                </svg>
+                                Позвонить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
-    <footer class="page-footer">
-        <div class="page-footer__site-container">
-            <p class="page-footer__copyright">
-                &copy;
-                <span class="js-year"></span>
-                <em>«LoremIpsum.net»</em>
-                &nbsp;Все&nbsp;права&nbsp;защищены.
-            </p>
-
-            <hr>
-
-            <ul class="page-footer__payments">
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./assets/sprite-0c55cbac.svg#qiwi"></use>
-                    </svg>
-                    <p class="payment__text">Qiwi wallet</p>
-                </li>
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./assets/sprite-0c55cbac.svg#yamoney"></use>
-                    </svg>
-                    <p class="payment__text">Yandex Money</p>
-                </li>
-                <li class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./assets/sprite-0c55cbac.svg#webmoney"></use>
-                    </svg>
-                    <p class="payment__text">Web Money</p>
-                </li>
-            </ul>
-
-            <hr>
-
-            <div class="page-footer__payments page-footer__links">
-                <a href="mailto:" class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./assets/sprite-0c55cbac.svg#mail"></use>
-                    </svg>
-                    <p class="payment__text">info@ipsum228.com</p>
-                </a>
-                <a href="mailto:" class="page-footer__payment payment">
-                    <svg class="payment__icon icon">
-                        <use xlink:href="./assets/sprite-0c55cbac.svg#vk"></use>
-                    </svg>
-                    <p class="payment__text">Мы вконтакте</p>
-                </a>
-            </div>
-        </div>
-    </footer>
     
-  </body>
+</body>
 </html>

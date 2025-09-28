@@ -5,21 +5,16 @@
     z-index: 200;
     width: 100%;
 
+
     &__dropdown {
         position: absolute;
         top: calc(100% - 1px);
-        z-index: 2000;
 
         overflow: hidden;
         display: none;
 
         width: 100%;
-        padding: 1rem 0.4rem 1rem 1rem;
-        background-color: rgba(39, 39, 51, 0.90);
-        border: 1px solid #3D4050;
-
-        border-bottom-left-radius: 0.3rem;
-        border-bottom-right-radius: 0.3rem;
+        padding-top: 0.8rem;
     }
 
     &__list {
@@ -27,19 +22,28 @@
         flex-direction: column;
         align-items: stretch;
 
-        max-height: 14.1rem;
-        overflow-y: scroll;
+        width: 100%;
+        overflow: hidden;
 
-        @include customScrollbar();
-
-        @supports (-moz-appearance:none) {
-            scrollbar-color: var(--color-accent, #42a9ed) transparent !important;
-            scrollbar-width: thin !important;
-        }
+        background-color: #fff;
+        border-radius: 0.8rem;
+        border: 1px solid var(--color-olive, #babd71);
     }
 
     &__item {
-        height: 3.4rem;
+        &:not(:first-child) {
+            .select__label {
+                @include breakpointMF(laptop) {
+                    border-bottom: 1px solid var(--color-olive, #babd71);
+                }
+            }
+        }
+
+        &--first-hidden {
+            &:first-child {
+                display: none;
+            }
+        }
     }
 
     &__label {
@@ -49,25 +53,49 @@
         gap: 1.6rem;
 
         width: 100%;
+        padding: 0.8rem 1rem;
+
+        color: var(--color-olive, #babd71);
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+
         transition: var(--transition);
         transition-property: background, border;
         cursor: pointer;
+        white-space: nowrap;
 
-        @include hover() {
+        @include breakpointMF(laptop) {
+            padding: 1rem 1.2rem;
+        }
 
-            .select__text {
-                color: var(--color-accent, #42a9ed);
+        &:has(input[type="radio"]:checked) {
+            background-color: var(--color-light-pink, #f3bfb6);
+
+            &::after {
+                border-width: 0;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D42111%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M8.00006%2011.587L5.70106%209.29197L4.28906%2010.708L8.00206%2014.413L14.7081%207.70697L13.2941%206.29297L8.00006%2011.587Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
 
-        input[type="radio"] {
+        &>input[type="checkbox"],
+        &>input[type="radio"] {
+            @include visuallyHidden();
+        }
+
+        @include hoverActive() {
+            background-color: var(--color-send, #fef098);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
             &:checked {
-                &~.select__icon {
-                    background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M19%2010C19%2014.9706%2014.9706%2019%2010%2019C5.02944%2019%201%2014.9706%201%2010C1%205.02944%205.02944%201%2010%201C14.9706%201%2019%205.02944%2019%2010ZM20%2010C20%2015.5228%2015.5228%2020%2010%2020C4.47715%2020%200%2015.5228%200%2010C0%204.47715%204.47715%200%2010%200C15.5228%200%2020%204.47715%2020%2010ZM10%2016C13.3137%2016%2016%2013.3137%2016%2010C16%206.68629%2013.3137%204%2010%204C6.68629%204%204%206.68629%204%2010C4%2013.3137%206.68629%2016%2010%2016Z%22%20fill%3D%22%23EF9930%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    border: none;
+                &~.select__tick {
+                    opacity: 1;
                 }
             }
         }
@@ -75,14 +103,25 @@
 
     &__text {
         display: block;
-        flex-grow: 1;
-        color: var(--color-white, #fff);
-        font-family: Lato;
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 188.889%;
-        transition: color var(--transition);
+        flex: 1 1 auto;
+        color: var(--Black, #141414);
+    }
+
+    &__tick {
+        display: none;
+        flex-shrink: 0;
+
+        width: 2.4rem;
+        height: 2.4rem;
+
+        fill: var(--Grey-1, #666);
+        transition: var(--transition);
+        transition-property: opacity;
+        opacity: 0;
+
+        @include breakpointMF(laptop) {
+            display: block;
+        }
     }
 
     &__current {
@@ -93,46 +132,52 @@
         justify-content: flex-start;
 
         width: 100%;
-        height: 4.8rem;
-        padding: 1rem;
+        height: 3.2rem;
+        padding: 0.8rem 1rem;
 
-        color: var(--color-bg-2, #272733);
-        font-family: Lato;
-        font-size: 1.8rem;
+        border: none;
+        outline: none;
+
+        color: var(--color-olive, #babd71);
+        font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 100%;
 
-        border-radius: 3px;
-        border: 1px solid var(--color-white, #fff);
-        background: rgba(255, 255, 255, 0.85);
+        background: #FFF;
+        border-radius: 0.8rem;
+        box-shadow: 1px 1px 4px 0 rgba(105, 72, 33, 0.20);
+
+        @include breakpointMF(laptop) {
+            padding: 1rem 1.2rem;
+        }
 
         &::after {
             position: absolute;
             top: 50%;
-            right: 1rem;
+            right: 1.3rem;
 
             display: block;
 
-            width: 1.6rem;
-            height: 1.6rem;
+            width: 1.7rem;
+            height: 1rem;
             transform: translateY(-50%) rotate(0deg);
 
-            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2221%22%20viewBox%3D%220%200%2021%2021%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M14.9337%208.51079C14.9337%208.43936%2014.898%208.359%2014.8445%208.30543L14.398%207.859C14.3445%207.80543%2014.2641%207.76971%2014.1927%207.76971C14.1212%207.76971%2014.0409%207.80543%2013.9873%207.859L10.4784%2011.3679L6.96946%207.859C6.91589%207.80543%206.83553%207.76971%206.7641%207.76971C6.68375%207.76971%206.61232%207.80543%206.55875%207.859L6.11232%208.30543C6.05875%208.359%206.02303%208.43936%206.02303%208.51079C6.02303%208.58221%206.05875%208.66257%206.11232%208.71614L10.273%2012.8769C10.3266%2012.9304%2010.407%2012.9661%2010.4784%2012.9661C10.5498%2012.9661%2010.6302%2012.9304%2010.6837%2012.8769L14.8445%208.71614C14.898%208.66257%2014.9337%208.58221%2014.9337%208.51079Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E");
-            background-size: 2rem 2rem;
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22.9281%2014.6221L16.6863%2020.8638L10.4446%2014.6221%22%20stroke%3D%22%23BABD71%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-size: auto;
             background-repeat: no-repeat;
             background-position: center;
 
+            // opacity: 0.4;
             transition: transform var(--transition);
             content: "";
         }
     }
 
-    &.select--opened {
-        .select__current {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+    &.select--open {
+        z-index: 1000;
 
+        .select__current {
             &::after {
                 transform: translateY(-50%) rotate(180deg);
             }
@@ -140,10 +185,16 @@
 
         .select__dropdown {
             display: block;
+
+            @include breakpoint(tablet) {
+                display: flex;
+            }
         }
 
         .select__list {
-            animation: slideDown 0.3s ease 0s 1 forwards;
+            @include breakpointMF(laptop) {
+                animation: slideDown 0.3s ease 0s 1 forwards;
+            }
         }
     }
 }

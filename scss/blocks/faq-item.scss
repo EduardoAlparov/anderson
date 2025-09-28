@@ -1,0 +1,124 @@
+@use "scss/utils/mixins" as *;
+
+.faq-item {
+    position: relative;
+
+    color: var(--color-olive, #babd71);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 96%;
+
+    @include breakpointMF(laptop) {
+        font-size: 1.4rem;
+    }
+
+    &__input {
+        @include visuallyHidden();
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 1rem 0.8rem;
+
+        background-color: #FFF;
+        box-shadow: 1px 1px 4px 0 rgba(105, 72, 33, 0.20);
+        border-radius: 0.8rem;
+    }
+
+    &__question {
+        flex: 1 1 100%;
+
+        @include maxSizeText(1);
+    }
+
+    &__icon {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        flex-shrink: 0;
+
+        .icon {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            display: block;
+            width: 3.2rem;
+            height: 3.2rem;
+
+            margin-block: -1rem;
+
+            stroke: var(--color-olive, #babd71);
+
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            @include breakpointMF(laptop) {}
+        }
+    }
+
+    &__dropdown {
+        display: none;
+    }
+
+    &__inner {
+        margin-top: 0.8rem;
+        padding: 1rem 0.8rem;
+
+        background-color: #FFF;
+        box-shadow: 1px 1px 4px 0 rgba(105, 72, 33, 0.20);
+        border-radius: 0.8rem;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        inset: 0;
+
+        display: block;
+        cursor: pointer;
+    }
+
+    &__input {
+        &:checked {
+            &+.faq-item__body {
+                .faq-item__button {
+                    .icon-arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .faq-item__dropdown {
+                    display: block;
+                }
+
+                .faq-item__inner {
+                    animation: slideFromTop 0.3s ease-out 0s 1 forwards;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

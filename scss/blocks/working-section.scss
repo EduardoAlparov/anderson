@@ -1,0 +1,74 @@
+@use "scss/utils/mixins" as *;
+
+.working-section {
+    padding-block: 33px 51px;
+    color: var(--color-red, #ee725e);
+    background-color: var(--color-latte, #fff8e7);
+
+    @include aspectRatio(desktop) {
+        padding-block: 2.4rem 5.8rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 17px;
+
+        @include aspectRatio(desktop) {
+            margin-top: 2.1rem;
+        }
+    }
+
+    &__item {
+        flex: 1 1 50%;
+    }
+
+    &__red-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+
+        margin-top: 16px;
+
+
+        &.tarriff-item {
+            padding: 12px 28px 29px;
+
+            @include aspectRatio(desktop) {
+                margin-top: 3.2rem;
+                padding: 1.2rem 3rem 4.6rem;
+            }
+        }
+
+        &>h5 {
+            width: min-content;
+
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 96%;
+
+            @include aspectRatio(desktop) {
+                width: auto;
+                font-size: 2.4rem;
+            }
+        }
+
+        &>p {
+            max-width: 25ch;
+
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 96%;
+            text-align: center;
+
+            @include aspectRatio(desktop) {
+                max-width: unset;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

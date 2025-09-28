@@ -1,0 +1,147 @@
+@use "scss/utils/mixins" as *;
+
+.lead-section {
+    position: relative;
+
+    &__site-container {
+        position: relative;
+        z-index: 300;
+    }
+
+    &__body {
+        padding-block: 18rem 4.5rem;
+
+        @include breakpointMF(laptop) {
+            margin-left: 35rem;
+            padding-block: 20rem 8.7rem;
+        }
+    }
+
+    &__title {
+        width: min-content;
+        margin-bottom: 6px;
+
+        color: var(--color-red, #ee725e);
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+
+        @include breakpointMF(laptop) {
+            width: 100%;
+            margin-bottom: 4rem;
+
+            font-size: 3.6rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px 11px;
+
+        width: 100%;
+
+        @include breakpointMF(laptop) {
+            max-width: 63rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        flex: 1 1 calc(50% - 6px);
+    }
+
+    &__item-icon {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+
+        &>svg {
+            display: block;
+            width: 4rem;
+            height: 3.4rem;
+
+            @include breakpointMF(laptop) {
+                width: 8.6rem;
+                height: 7.5rem;
+            }
+        }
+    }
+
+    &__item-text {
+        color: var(--color-olive, #babd71);
+
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+
+        @include breakpointMF(laptop) {
+            font-size: 2rem;
+        }
+
+        &>span {
+            font-size: 20px;
+
+            @include breakpointMF(laptop) {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        z-index: 200;
+
+        width: 45%;
+        transform: translate(-50%, -50%);
+
+        @include breakpointMF(tablet) {
+            width: 25%;
+        }
+
+        @include breakpointMF(laptop) {
+            top: 1rem;
+            left: 0;
+            bottom: 2rem;
+            width: 29%;
+            max-height: 100%;
+            transform: translate(0%, 0%);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+
+        img {
+            display: block;
+            width: 100%;
+            margin-inline: auto;
+
+            object-fit: contain;
+            object-position: center;
+
+            @include breakpointMF(laptop) {
+                height: 90%;
+            }
+        }
+    }
+}

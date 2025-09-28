@@ -1,0 +1,121 @@
+@use "scss/utils/mixins" as *;
+
+.faq-section {
+    &__main {
+        padding-block: 1.7rem 3rem;
+
+        color: #FFF;
+        background-color: var(--color-light-pink, #f3bfb6);
+
+        @include breakpointMF(laptop) {
+            padding-block: 1.7rem 6.5rem;
+
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        margin-top: 13px;
+
+        @include breakpointMF(laptop) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        margin: 0;
+        width: 100%;
+        max-width: 51.6rem;
+    }
+
+    &__footer {
+        padding-block: 1.3rem 1.9rem;
+
+        color: var(--color-olive, #babd71);
+
+        @include breakpointMF(laptop) {
+            padding-block: 1.7rem 6.5rem;
+
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.3rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &__link {
+        display: grid;
+        place-items: center;
+        grid-auto-flow: column;
+        gap: 0.3rem;
+
+        height: 2.8rem;
+        padding-inline: 0.5rem;
+
+        color: #FFF;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%;
+        text-decoration: none;
+
+        transition: box-shadow 0.3s ease;
+
+        border-radius: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            height: 3.8rem;
+            padding-inline: 1.8rem;
+
+            font-size: 1.4rem;
+        }
+
+        &>svg {
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        .icon {
+            &.icon-whatsapp {
+                fill: #fff;
+            }
+
+            &.icon-telephone,
+            &.icon-telegram {
+                stroke: #fff;
+            }
+        }
+
+        &:has(.icon-whatsapp) {
+            background-color: #45D354;
+        }
+
+        &:has(.icon-telegram) {
+            background-color: #2CA5E0;
+        }
+
+        &:has(.icon-telephone) {
+            background-color: #EE725E;
+        }
+
+        &:hover {
+            box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+        }
+    }
+}
