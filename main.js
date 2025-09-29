@@ -2,6 +2,7 @@ import './style.scss';
 
 import selectContol from "./js/selectContol";
 import gallerySwipers from "./js/gallerySwipers";
+import reviewsSwipers from "./js/reviewsSwipers";
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     selectContol();
     gallerySwipers();
+    reviewsSwipers();
 })

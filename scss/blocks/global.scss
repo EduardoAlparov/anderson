@@ -1,0 +1,79 @@
+@use "scss/utils/mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h6 {
+    font-size: unset;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    /* layouts: */
+    --max-container-width: 116rem;
+    --content-padding: 2.8rem;
+
+    /* colors: */
+    --color-olive: #babd71; // var(--color-olive, #babd71);  -- OLIVE
+    --color-bronze: #ee725e; // var(--color-bronze, #ee725e);  -- BRONZE
+    --color-send: #fef098; // var(--color-send, #fef098);  -- SEND
+    --color-latte: #fff8e7; // var(--color-latte, #fff8e7);  -- LATTE
+    --color-light-pink: #f3bfb6; // var(--color-light-pink, #f3bfb6);  -- PINK
+}
+
+html {
+    &:has(.font-size-modifaer) {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+
+        body {
+            font-family: Montserrat;
+        }
+
+        font-size: 10px;
+
+        @include breakpointMF(laptop) {
+            font-size: 10px;
+            font-size: clamp(5px, 0.7vw, 25px);
+        }
+    }
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+[class*="__site-container"] {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding-inline: var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem),
+                var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem),
+                var(--content-padding));
+    }
+}
+
+.page-wrapper {
+    width: 100%;
+    overflow: hidden;
+}

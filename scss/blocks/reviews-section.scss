@@ -1,0 +1,58 @@
+@use "scss/utils/mixins" as *;
+
+.reviews-section {
+    position: relative;
+    padding-block: 26px 0;
+
+    color: var(--color-red, #ee725e);
+
+    &::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        height: 50%;
+        background-color: var(--color-send, #fef098);
+        content: "";
+    }
+
+    @include breakpointMF(laptop) {
+        padding-block: 2.6rem 0;
+    }
+
+    &__body {
+        margin-top: 8px;
+
+        @include breakpointMF(laptop) {
+            margin-top: 1.4rm;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            padding-block: 1.55rem;
+            margin-inline: -100%;
+            padding-inline: 100%;
+
+            @include breakpointMF(laptop) {
+                padding-block: 2.15rem;
+            }
+        }
+    }
+
+    &__swiper-wrapper {
+        &.swiper-wrapper {
+            align-items: stretch;
+        }
+    }
+
+    &__footer {
+        padding-block: 11px 15px;
+
+        @include breakpointMF(laptop) {
+            padding-block: 0.8rem 1.8rem;
+        }
+    }
+}

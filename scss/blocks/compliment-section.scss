@@ -48,6 +48,51 @@
         }
     }
 
+    &__title {
+        position: relative;
+
+        width: max-content;
+        padding-inline: 4rem;
+
+        @include breakpointMF(laptop) {
+            padding-inline: 4.8rem;
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            display: block;
+            width: 21px;
+            height: 28px;
+            flex-shrink: 0;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2233%22%20height%3D%2244%22%20viewBox%3D%220%200%2033%2044%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_2167_926)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0.624022%202.93805C1.79866%200.0245849%204.57007%20-1.10066%208.50389%201.31405C10.9511%202.8164%2017.1913%209.25765%2016.6835%2012.5056C17.4299%207.74314%2020.287%203.07186%2024.7898%201.28972C25.5423%200.991685%2026.3437%200.778801%2027.1513%200.809213C29.2742%200.906531%2030.9505%202.69475%2031.8376%204.61071C33.3365%207.84654%2033.2386%2011.6298%2032.3699%2015.0907C31.5011%2018.5515%2029.9105%2021.7752%2028.4666%2025.0414C25.7625%2031.1786%2023.609%2037.5225%2021.8899%2044.0003C22.0489%2041.8775%2018.886%2039.4141%2017.5951%2037.857C15.6618%2035.5153%2013.7469%2033.1554%2011.9238%2030.7285C8.41212%2026.0633%205.17575%2021.167%202.62458%2015.9057C1.37041%2013.3024%200.269183%2010.5654%200.0428202%207.6884C-0.0978917%205.8576%200.110117%204.22143%200.624022%202.93805Z%22%20fill%3D%22%23EE725E%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_2167_926%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2233%22%20height%3D%2244%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E");
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: "";
+
+
+            @include breakpointMF(laptop) {
+                width: 3.3rem;
+                height: 4.4rem;
+            }
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
+
     &__right,
     &__left {
         margin-inline: calc(var(--content-padding) * -1);

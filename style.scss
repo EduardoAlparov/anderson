@@ -1,8 +1,8 @@
-@use "scss/utils/mixins" as *;
+// @use "scss/utils/mixins" as *;
 @use "scss/fonts.scss";
 
 // layout:
-@use "scss/blocks/page-wrapper.scss";
+@use "scss/blocks/global.scss";
 
 // ui:
 @use "scss/blocks/prime-btn.scss";
@@ -14,10 +14,14 @@
 @use "scss/blocks/formats-section.scss";
 @use "scss/blocks/format-item.scss";
 @use "scss/blocks/offer-section.scss";
+@use "scss/blocks/personal-section.scss";
+@use "scss/blocks/personal-radio.scss";
 @use "scss/blocks/gift-section.scss";
 @use "scss/blocks/working-section.scss";
 @use "scss/blocks/working-item.scss";
 @use "scss/blocks/gallery-section.scss";
+@use "scss/blocks/reviews-section.scss";
+@use "scss/blocks/review-slide.scss";
 @use "scss/blocks/image-link.scss";
 @use "scss/blocks/tarriff-item.scss";
 @use "scss/blocks/faq-section.scss";
@@ -26,68 +30,3 @@
 @use "scss/blocks/compliment-section.scss";
 @use "scss/blocks/safety-section.scss";
 @use "scss/blocks/request-section.scss";
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-h6 {
-    font-size: unset;
-    font-weight: normal;
-}
-
-li {
-    list-style: none;
-}
-
-:root {
-    /* typography: */
-    --font-size-sm: 10px;
-
-    /* layouts: */
-    --max-container-width: 116rem;
-    --content-padding: 2.8rem;
-
-    /* colors: */
-    --color-accent: #3e9cdc;
-    --color-accent-2: #42a9ed;
-    --color-black: #000;
-    --color-bg: rgba(16, 16, 29, 0.90);
-    --color-bg-2: #272733;
-    --color-bg-3: #2a2b30;
-    --color-bg-4: #3d4050;
-    --color-white: #fff;
-    --color-border: #6f6d7b;
-    --color-text: #bbb;
-    --color-text-2: #C3C3C3;
-
-    --color-olive: #babd71; // var(--color-olive, #babd71);  -- OLIVE
-    --color-bronze: #ee725e; // var(--color-bronze, #ee725e);  -- BRONZE
-    --color-send: #fef098; // var(--color-send, #fef098);  -- SEND
-    --color-latte: #fff8e7; // var(--color-latte, #fff8e7);  -- LATTE
-    --color-light-pink: #f3bfb6; // var(--color-light-pink, #f3bfb6);  -- PINK
-
-    /* others: */
-    --transition: 0.3s ease;
-}
-
-
-._intro-padding-top {
-    padding-top: var(--header-height);
-}
-
-.preload * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}

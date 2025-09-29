@@ -1,12 +1,12 @@
 @use "scss/utils/mixins" as *;
 
 .gallery-section {
-    padding-block: 49px 53px;
+    padding-block: 49px 26px;
 
     color: var(--color-red, #ee725e);
 
     @include breakpointMF(laptop) {
-        padding-block: 6.8rem 5.2rem;
+        padding-block: 6.8rem 2.6rem;
     }
 
     &__navigation {
@@ -57,7 +57,7 @@
 
         background-color: transparent;
         border-radius: 3rem;
-
+        cursor: pointer;
         transition: all 0.3s ease;
 
         @include breakpointMF(laptop) {

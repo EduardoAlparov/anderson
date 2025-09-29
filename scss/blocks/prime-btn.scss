@@ -16,18 +16,23 @@
     text-align: center;
 
     border-radius: 0.8rem;
-    background-color: var(--color-red, #ee725e);
+    background-color: var(--color-bronze, #ee725e);
     box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
 
     border: none;
     outline: none;
     cursor: pointer;
     text-decoration: none;
+    transition: box-shadow 0.3s ease-out;
 
     @include breakpointMF(laptop) {
         padding: 1rem;
         font-size: 2.2rem;
         border-radius: 0.8rem;
+    }
+
+    &:hover {
+        box-shadow: inset 5px 5px 15px 0 rgba(105, 72, 33, 0.20);
     }
 
     &.prime-btn--smaller {
@@ -39,6 +44,11 @@
             height: 4.3rem;
             font-size: 1.6rem;
         }
+    }
+
+    &.prime-btn--light {
+        background-color: var(--color-latte, #fff8e7);
+        color: var(--color-red, #ee725e);
     }
 
     &.prime-btn--olive {

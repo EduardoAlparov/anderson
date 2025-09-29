@@ -4,6 +4,11 @@ export default () => {
 
 	selects.forEach((select) => {
 		select.addEventListener('click', () => {
+
+            selects.forEach((s) => {
+                s.classList.remove('select--open');
+            })
+
 			select.classList.add('select--open');
 
 			window.addEventListener('click', (e) => {

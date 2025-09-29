@@ -15,7 +15,7 @@ export default () => {
             navigation: {
                 nextEl: carousel.querySelector('.gallery-section__swiper-next'),
                 prevEl: carousel.querySelector('.gallery-section__swiper-prev'),
-              },
+            },
         })
     });
 }

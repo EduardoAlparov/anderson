@@ -157,18 +157,24 @@
         text-align: center;
         white-space: nowrap;
         text-decoration: none;
+        cursor: pointer;
 
         border-radius: 0.8rem;
         background-color: var(--color-red, #ee725e);
         box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
         border: none;
         outline: none;
+        transition: box-shadow 0.3s ease-out;
 
         @include breakpointMF(laptop) {
             min-width: 22rem;
             height: 4.3rem;
 
             font-size: 1.6rem;
+        }
+
+        &:hover {
+            box-shadow: inset 5px 5px 15px 0 rgba(105, 72, 33, 0.20);
         }
     }
 }

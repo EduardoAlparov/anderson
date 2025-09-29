@@ -1,0 +1,122 @@
+@use "scss/utils/mixins" as *;
+
+.review-slide {
+    color: var(--color-red, #ee725e);
+
+    &.swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 11px;
+
+        flex-grow: 1;
+        padding: 0.9rem 1rem;
+
+        background: #FFF;
+        border-radius: 0.8rem;
+        box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 2.1rem;
+    }
+
+    &__avater {
+        width: 67px;
+        height: 67px;
+        flex-shrink: 0;
+
+        @include breakpointMF(laptop) {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    &__author-name {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 96%;
+
+        @include breakpointMF(laptop) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__author-info {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%;
+
+        @include breakpointMF(laptop) {
+            font-size: 1.2rem;
+        }
+
+        &>* {
+            display: inline;
+        }
+    }
+
+    &__author-child {
+        &::after {
+            content: ",";
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__star {
+        .icon {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__text {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%;
+
+        @include breakpointMF(laptop) {
+            padding-right: 1.7rem;
+
+            font-size: 1.4rem;
+            line-height: 100%;
+        }
+
+        blockquote {
+            @include line-clamp(4);
+        }
+    }
+}

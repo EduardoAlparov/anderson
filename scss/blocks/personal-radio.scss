@@ -1,0 +1,185 @@
+@use "scss/utils/mixins" as *;
+
+.personal-radio {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+    padding-top: 20px;
+
+    &__image {
+        position: relative;
+        width: 6.7rem;
+        height: 6.7rem;
+
+        clip-path: inset(-20px -10px 0 -10px round 8px);
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+        }
+    }
+
+    &__name {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+        text-align: center;
+        padding-right: 0.5rem;
+
+        @include breakpointMF(laptop) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &>input {
+        @include visuallyHidden();
+    }
+
+    &>label {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    &>input {
+        &:checked {
+            &+.personal-radio__image {
+                img {
+                    mask-image: linear-gradient(to top, transparent, #ee725e);
+                    mask-size: 100%;
+                    mask-position: 0%;
+                    mask-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+#my-popover-holiday[popover] {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    inset: 0px;
+    margin: auto;
+}
+
+.personal-popover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: fit-content;
+    min-width: 19.7rem;
+    height: fit-content;
+    min-height: 29.7rem;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 1.4rem;
+
+    border: none;
+    color: var(--color-latte, #fff8e7);
+    box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
+    background: var(--color-bronze, #ee725e);
+    border-radius: 0.8rem;
+
+    &__title {
+        margin-bottom: 0.6rem;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 96%;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+
+    &__key {
+
+        &.personal-popover__name {
+            width: min-content;
+
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        &.personal-popover__total-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 140%;
+        }
+    }
+
+    &__value {
+        white-space: nowrap;
+
+        &.personal-popover__price {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 140%;
+            text-align: right;
+        }
+
+        &.personal-popover__total {
+            text-align: right;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 140%;
+        }
+    }
+
+    &__bottom {
+        margin-top: auto;
+        padding-top: 1.2rem;
+        border-top: 1.5px solid var(--color-latte, #fff8e7);
+
+        .personal-popover__row {
+            margin-bottom: 0.7rem;
+        }
+    }
+
+    &__btn {
+        margin-inline: auto;
+
+        &.prime-btn {
+            max-width: 13.1rem;
+            min-width: 13.1rem;
+            height: auto;
+            padding: 1rem;
+        }
+    }
+
+    &__text {
+        max-width: 25ch;
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+}
