@@ -1,18 +1,58 @@
 @use "scss/utils/mixins" as *;
 
 .request-section {
+    position: relative;
     padding-block: 5rem;
 
     color: var(--color-bronze, #ee725e);
 
-    background-image: url('../../images/girl.svg');
-    background-position: right -15rem center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    // background-image: url('../girl.svg');
+    // background-position: right -15rem center;
+    // background-repeat: no-repeat;
+    // background-size: auto 100%;
 
     @include breakpointMF(laptop) {
         background-position: right center;
         padding-block: 9.6rem 7.2rem;
+    }
+
+    &__site-container {
+        position: relative;
+        z-index: 200;
+    }
+
+    &__cover {
+        position: absolute;
+        top: 0;
+        top: 5.1rem;
+        bottom: 16.5rem;
+        right: 0;
+        z-index: 100;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+
+        width: 100%;
+        height: calc(100% - (5.1rem + 16.5rem));
+
+        @include aspectRatio(desktop) {
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+
+        svg {
+            display: block;
+            aspect-ratio: 0.57 / 1;
+            height: 100%;
+            transform: translateX(40%);
+
+            @include aspectRatio(desktop) {
+                transform: translateX(0%);
+            }
+        }
     }
 
     &__title {

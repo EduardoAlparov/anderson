@@ -9,7 +9,6 @@
 
         @include breakpointMF(laptop) {
             padding-block: 1.7rem 6.5rem;
-
         }
     }
 
@@ -39,7 +38,7 @@
         color: var(--color-olive, #babd71);
 
         @include breakpointMF(laptop) {
-            padding-block: 1.7rem 6.5rem;
+            padding-block: 2.9rem 2.6rem;
 
         }
     }

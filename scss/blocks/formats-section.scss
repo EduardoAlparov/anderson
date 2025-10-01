@@ -30,6 +30,18 @@
             font-size: 3.6rem;
         }
 
+        &.formats-section__title--olive {
+            color: var(--color-olive, #babd71);
+        }
+
+        &.formats-section__title--red {
+            color: var(--color-bronze, #ee725e);
+        }
+
+        &.formats-section__title--light {
+            color: var(--color-latte, #fff8e7);
+        }
+
         &.formats-section__title--icon {
             position: relative;
 

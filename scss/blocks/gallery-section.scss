@@ -3,7 +3,7 @@
 .gallery-section {
     padding-block: 49px 26px;
 
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
 
     @include breakpointMF(laptop) {
         padding-block: 6.8rem 2.6rem;

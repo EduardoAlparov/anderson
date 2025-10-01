@@ -1,7 +1,7 @@
 @use "scss/utils/mixins" as *;
 
 .review-slide {
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
 
     &.swiper-slide {
         display: flex;

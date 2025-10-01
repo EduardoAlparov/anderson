@@ -2,7 +2,7 @@
 
 .working-section {
     padding-block: 33px 51px;
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
     background-color: var(--color-latte, #fff8e7);
 
     @include aspectRatio(desktop) {
@@ -44,6 +44,7 @@
         &>h5 {
             width: min-content;
 
+            color: var(--color-latte, #fff8e7);
             text-align: center;
             font-size: 16px;
             font-style: normal;
@@ -59,6 +60,7 @@
         &>p {
             max-width: 25ch;
 
+            color: var(--color-latte, #fff8e7);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -68,6 +70,14 @@
             @include aspectRatio(desktop) {
                 max-width: unset;
                 font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__link {
+        &.tarriff-item__button.format-item__button {
+            @include aspectRatio(desktop) {
+                min-width: 26rem;
             }
         }
     }

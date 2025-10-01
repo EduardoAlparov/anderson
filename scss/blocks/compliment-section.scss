@@ -3,7 +3,7 @@
 .compliment-section {
     position: relative;
     padding-block: 38px 30px;
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
 
     @include breakpointMF(laptop) {
         padding-block: 9.2rem 4.6rem;
@@ -110,7 +110,7 @@
 
         padding-block: 16px 15px;
         color: var(--color-latte, #fff8e7);
-        background-color: var(--color-red, #ee725e);
+        background-color: var(--color-bronze, #ee725e);
 
         @include breakpointMF(laptop) {
             padding-block: 1.8rem 1.9rem;
@@ -167,7 +167,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-color: var(--color-red, #ee725e);
+        background-color: var(--color-bronze, #ee725e);
 
         @include breakpointMF(laptop) {
             width: 27.4rem;
@@ -190,6 +190,7 @@
         display: block;
         overflow: hidden;
 
+        color: var(--color-latte, #fff8e7);
         font-size: 10px;
         font-style: italic;
         font-weight: 400;
@@ -204,6 +205,7 @@
     }
 
     &__author-name {
+        color: var(--color-latte, #fff8e7);
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -215,6 +217,7 @@
     }
 
     &__author-role {
+        color: var(--color-latte, #fff8e7);
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -240,6 +243,7 @@
         margin-block: 20px 15px;
         margin-inline: auto;
 
+        color: var(--color-bronze, #ee725e);
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -278,6 +282,7 @@
     &__green-title {
         margin-bottom: 9px;
 
+        color: var(--color-latte, #fff8e7);
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -292,6 +297,7 @@
     &__green-subtitle {
         margin-bottom: 12px;
 
+        color: var(--color-latte, #fff8e7);
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -312,6 +318,7 @@
         margin-bottom: 1.5rem;
 
         &>li {
+            color: var(--color-latte, #fff8e7);
             font-size: 10px;
             font-style: normal;
             font-weight: 400;
@@ -346,8 +353,18 @@
         }
 
         &>p {
+            color: var(--color-latte, #fff8e7);
+
             &:last-child {
                 margin-bottom: 0;
+            }
+        }
+    }
+
+    &__button {
+        &.format-item__button {
+            @include breakpointMF(laptop) {
+                padding-inline: 1.3rem;
             }
         }
     }

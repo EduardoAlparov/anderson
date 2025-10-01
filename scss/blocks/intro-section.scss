@@ -134,7 +134,7 @@
 
             text-align: center;
 
-            color: var(--color-red, #ee725e);
+            color: var(--color-olive, #babd71);
             font-family: Montserrat;
             font-size: 12px;
             font-style: normal;
@@ -153,7 +153,7 @@
             }
 
             @include placeholder() {
-                color: var(--color-red, #ee725e);
+                color: var(--color-olive, #babd71);
                 font-family: Montserrat;
                 font-size: 12px;
                 font-style: normal;
@@ -222,7 +222,7 @@
         display: grid;
         place-items: center;
 
-        color: var(--color-red, #ee725e);
+        color: var(--color-bronze, #ee725e);
         font-family: Montserrat;
         font-size: 12px;
         font-style: normal;
@@ -302,8 +302,9 @@
 
         @include breakpointMF(laptop) {
             top: 3rem;
-            left: calc(50% + 61rem);
-            transform: translate(-100%, 0);
+            left: unset;
+            right: 5.2rem;
+            // transform: translate(-100%, 0);
         }
 
         @include breakpointMF(laptop) {

@@ -2,7 +2,7 @@
 
 .offer-section {
     padding-block: 43px 49px;
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
 
     @include breakpointMF(laptop) {
         padding-block: 5rem;
@@ -29,6 +29,14 @@
 
         @include breakpointMF(laptop) {
             font-size: 1.4rem;
+        }
+
+        &.offer-section__subtitle--light {
+            color: var(--color-latte, #fff8e7);
+        }
+
+        &.offer-section__subtitle--red {
+            color: var(--color-bronze, #ee725e);
         }
 
         &.offer-section__subtitle--olive {

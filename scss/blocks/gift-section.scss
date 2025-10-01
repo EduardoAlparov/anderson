@@ -3,7 +3,7 @@
 .gift-section {
     padding-block: 45px 49px;
 
-    color: var(--color-red, #ee725e);
+    color: var(--color-bronze, #ee725e);
 
     @include breakpointMF(laptop) {
         padding-block: 5rem 8.4rem;
@@ -58,6 +58,7 @@
     &__title {
         max-width: 32ch;
 
+        color: var(--color-bronze, #ee725e);
         font-size: 15px;
         font-style: normal;
         font-weight: 600;
@@ -67,6 +68,10 @@
         @include breakpointMF(laptop) {
             max-width: 35ch;
             font-size: 2rem;
+        }
+
+        strong {
+            font-weight: 700;
         }
     }
 

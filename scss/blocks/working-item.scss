@@ -12,6 +12,7 @@
     &__name {
         margin-bottom: 5px;
 
+        color: var(--color-bronze, #ee725e);
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -24,6 +25,7 @@
     }
 
     &__text {
+        color: var(--color-bronze, #ee725e);
         font-size: 11px;
         font-style: normal;
         font-weight: 400;
