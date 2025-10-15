@@ -68,7 +68,7 @@
     }
 
     &__list {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -182,6 +182,35 @@
             &>.icon {
                 stroke: var(--color-bronze, #ee725e);
             }
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1rem;
+        z-index: 100;
+
+        color: #FFF;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 96%;
+        text-align: center;
+    }
+}
+
+.gallery-section__navigation {
+    &:has(input[type="radio"]#gallery-navigation-photo:checked) {
+        &~.gallery-section__list--photos {
+            display: flex;
+        }
+    }
+
+    &:has(input[type="radio"]#gallery-navigation-video:checked) {
+        &~.gallery-section__list--video {
+            display: flex;
         }
     }
 }

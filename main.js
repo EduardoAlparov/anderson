@@ -2,6 +2,7 @@ import './style.scss';
 
 import selectContol from "./js/selectContol";
 import gallerySwipers from "./js/gallerySwipers";
+import fancybox from "./js/fancybox";
 import reviewsSwipers from "./js/reviewsSwipers";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,5 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     selectContol();
     gallerySwipers();
+    fancybox();
     reviewsSwipers();
 })
