@@ -18,7 +18,6 @@ export default function fancybox() {
             const videoSrc = video.getAttribute('src');
             el.setAttribute('data-srs', videoSrc);
         } else return;
-
     })
 
     Fancybox.bind('[data-fancybox]', {
