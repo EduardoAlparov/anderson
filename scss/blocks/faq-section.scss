@@ -39,7 +39,22 @@
 
         @include breakpointMF(laptop) {
             padding-block: 2.9rem 2.6rem;
+        }
+    }
 
+    &__form-block {
+        padding-block: 3rem 1.9rem;
+
+        @include breakpointMF(laptop) {
+            padding-block: 7.5rem 3.4rem;
+        }
+
+        .offer-section__title {
+            max-width: unset;
+        }
+
+        .offer-section__form {
+            margin-bottom: unset;
         }
     }
 

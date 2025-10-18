@@ -138,13 +138,13 @@
         border: none;
         outline: none;
 
-        color: var(--color-olive, #babd71);
+        color: var(--color-latte, #fff8e7);
         font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
 
-        background: #FFF;
+        background-color: var(--color-olive, #babd71);
         border-radius: 0.8rem;
         box-shadow: 1px 1px 4px 0 rgba(105, 72, 33, 0.20);
 
@@ -159,12 +159,12 @@
 
             display: block;
 
-            width: 1.7rem;
-            height: 1rem;
+            width: 2.7rem;
+            height: 2rem;
             transform: translateY(-50%) rotate(0deg);
 
-            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22.9281%2014.6221L16.6863%2020.8638L10.4446%2014.6221%22%20stroke%3D%22%23BABD71%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
-            background-size: auto;
+            background-image: url("data:image/svg+xml, %3Csvg%20id%3D%22n-arrow-down%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22%2014L16%2020L10%2014%22%20stroke-width%3D%223%22%20stroke%3D%22%23fff8e7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
 

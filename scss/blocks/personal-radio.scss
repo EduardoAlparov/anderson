@@ -93,6 +93,18 @@
     background: var(--color-bronze, #ee725e);
     border-radius: 0.8rem;
 
+    &.personal-popover--height-auto {
+        min-height: auto;
+
+        &:hover {
+            box-shadow: inset 5px 5px 15px 0 rgba(105, 72, 33, 0.20);
+        }
+
+        .personal-popover__title {
+            margin-bottom: unset;
+        }
+    }
+
     &__title {
         margin-bottom: 0.6rem;
         font-size: 2rem;

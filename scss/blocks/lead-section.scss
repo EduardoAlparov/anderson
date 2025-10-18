@@ -141,6 +141,13 @@
         inset: 0;
         z-index: 100;
 
+        @include breakpointMF(laptop) {
+            inset: unset;
+            bottom: -12%;
+            left: 20%;
+            height: 100%;
+        }
+
         img {
             display: block;
             width: 100%;

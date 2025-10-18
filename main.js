@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.remove('preload');
     }, 500);
 
+    const buttonForm = document.querySelector('[data-button-form]');
+
+    buttonForm.onsubmit = (e) => {
+        e.preventDefault();
+
+        const button = document.createElement("button");
+        button.classList.add('visually-hidden');
+        button.setAttribute('popovertarget', 'my-popover-check-list');
+        document.body.appendChild(button);
+
+        button.click();
+        button.remove();
+    }
+
     selectContol();
     gallerySwipers();
     fancybox();

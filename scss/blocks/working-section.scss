@@ -20,7 +20,7 @@
     }
 
     &__item {
-        flex: 1 1 50%;
+        flex: 0 1 50%;
     }
 
     &__red-box {
@@ -53,7 +53,7 @@
 
             @include aspectRatio(desktop) {
                 width: auto;
-                font-size: 2.4rem;
+                font-size: 2.9rem;
             }
         }
 
@@ -69,16 +69,49 @@
 
             @include aspectRatio(desktop) {
                 max-width: unset;
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
         }
     }
 
     &__link {
-        &.tarriff-item__button.format-item__button {
-            @include aspectRatio(desktop) {
-                min-width: 26rem;
-            }
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        display: grid;
+        place-content: center;
+        place-items: center;
+        min-width: 17.8rem;
+        height: 3.2rem;
+        padding: 1rem;
+        transform: translate(-50%, -50%);
+
+        color: var(--color-latte, #fff8e7);
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 100%;
+        text-align: center;
+        text-decoration: none;
+
+        background-color: #939653;
+        box-shadow: 2px 2px 6px rgba(97, 61, 25, 0.25);
+        border-radius: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            min-width: 37rem;
+            height: 5.5rem;
+            font-size: 2.1rem;
+
+            border-radius: 1.6rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 0.8rem;
         }
     }
 }

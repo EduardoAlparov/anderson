@@ -362,9 +362,69 @@
     }
 
     &__button {
+        grid-auto-flow: column;
+        justify-content: flex-end;
+
+        padding-left: 22.5rem;
+        cursor: default;
+
         &.format-item__button {
-            @include breakpointMF(laptop) {
-                padding-inline: 1.3rem;
+            @include breakpointMF(laptop) {}
+        }
+
+        &>input {
+            width: 12.4rem;
+            border: none;
+            outline: none;
+
+            color: var(--color-latte, #fff8e7);
+            font-family: Montserrat;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            background-color: transparent;
+
+            @include placeholder() {
+                color: var(--color-latte, #fff8e7);
+                font-family: Montserrat;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus {
+                transition: background-color 0s 600000s, color 0s 600000s !important;
+            }
+        }
+
+        &>button {
+            position: absolute;
+            left: 1.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+
+            color: var(--color-latte, #fff8e7);
+            font-family: Montserrat;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            pointer-events: none;
+        }
+
+        &:has(input:valid) {
+            &>button {
+                pointer-events: all;
             }
         }
     }

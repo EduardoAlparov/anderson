@@ -31,6 +31,7 @@ li {
     --color-send: #fef098; // var(--color-send, #fef098);  -- SEND
     --color-latte: #fff8e7; // var(--color-latte, #fff8e7);  -- LATTE
     --color-light-pink: #f3bfb6; // var(--color-light-pink, #f3bfb6);  -- PINK
+    --color-dark-green: #304608; // var(--color-dark-green, #304608);  -- GREEN
 }
 
 html {
@@ -48,6 +49,10 @@ html {
             font-size: 10px;
             font-size: clamp(5px, 0.7vw, 25px);
         }
+    }
+
+    [popover]::backdrop {
+        background-color: rgb(0 0 0 / 0.5);
     }
 }
 

@@ -20,7 +20,7 @@
         align-items: stretch;
         flex-grow: 1;
 
-        padding-block: 4em 4em;
+        padding-block: 0 4rem;
 
         @include breakpointMF(laptop) {
             min-height: 45rem;
@@ -59,31 +59,19 @@
 
     &__title {
         grid-area: is-title;
+        padding-block: 3.2rem 2rem;
 
-        display: block;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0;
+        width: min-content;
 
-        .icon {
-            display: block;
-
-            aspect-ratio: 2.75 / 1;
-
-            &.icon-mobile {
-                width: 250px;
-                transform: translateX(-2rem);
-
-                @include breakpointMF(laptop) {
-                    display: none;
-                }
-            }
-
-            &.icon-desktop {
-                display: none;
-                width: 46.2rem;
-
-                @include breakpointMF(laptop) {
-                    display: block;
-                }
-            }
+        @include breakpointMF(laptop) {
+            width: auto;
+            padding-block: 3.2rem 10rem;
+            font-size: 6.4rem;
         }
     }
 
@@ -94,27 +82,27 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: 4px;
+        gap: 10px;
 
-        max-width: min-content;
+        max-width: 265px;
         margin-top: auto;
 
         @include breakpointMF(laptop) {
+            max-width: unset;
             justify-self: flex-start;
             gap: 1.5rem;
-            margin-left: 5.5rem;
         }
     }
 
     &__row {
         display: flex;
         align-items: center;
-        gap: 7px;
+        gap: 10px;
 
         height: 32px;
 
         @include breakpointMF(laptop) {
-            gap: 1.1rem;
+            gap: 1.2rem;
             height: 5.1rem;
         }
     }
@@ -134,7 +122,7 @@
 
             text-align: center;
 
-            color: var(--color-olive, #babd71);
+            color: var(--color-bronze, #ee725e);
             font-family: Montserrat;
             font-size: 12px;
             font-style: normal;
@@ -153,7 +141,7 @@
             }
 
             @include placeholder() {
-                color: var(--color-olive, #babd71);
+                color: var(--color-bronze, #ee725e);
                 font-family: Montserrat;
                 font-size: 12px;
                 font-style: normal;
@@ -171,8 +159,7 @@
     &__form-title {
         min-width: 215px;
 
-        color: var(--color-send, #fef098);
-        font-family: Montserrat;
+        color: var(--color-dark-green #304608);
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -180,17 +167,24 @@
         text-align: center;
         white-space: nowrap;
 
-        &::after,
-        &::before {
-            @include breakpointMF(laptop) {
-                display: inline-block;
-                content: "";
-            }
-        }
 
         @include breakpointMF(laptop) {
             max-width: 34.5rem;
             font-size: 2.4rem;
+            text-align: left;
+        }
+    }
+
+    &__form-subtitle {
+        color: var(--color-dark-green #304608);
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+
+        @include breakpointMF(laptop) {
+            font-size: 2rem;
+            text-align: left;
         }
     }
 
@@ -205,7 +199,7 @@
         grid-template-rows: repeat(2, max-content);
         column-gap: 1.2rem;
 
-        margin-block: 2.4rem 4rem;
+        margin-block: 0 2rem;
 
         width: max-content;
 
@@ -214,7 +208,7 @@
             column-gap: 2.2rem;
             margin-block: unset;
 
-            transform: translate(-30%, -15%);
+            transform: translate(-45%, -10%);
         }
     }
 
@@ -294,22 +288,17 @@
     }
 
     &__logo {
-        top: 14px;
-        left: 2.6rem;
+        position: absolute;
+        top: 3.2rem;
+        right: 1.8rem;
 
         display: grid;
         place-items: center;
 
         @include breakpointMF(laptop) {
-            top: 3rem;
-            left: unset;
-            right: 5.2rem;
-            // transform: translate(-100%, 0);
+            display: none;
         }
 
-        @include breakpointMF(laptop) {
-            position: absolute;
-        }
 
         &>svg {
             width: 90px;
@@ -322,15 +311,27 @@
     }
 
     &__star {
-        top: 30px;
-        right: 40px;
+        top: 3rem;
+        left: 51%;
+
+        .icon-mobile {
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+
+        .icon-desktop {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+        }
 
         @include breakpointMF(laptop) {
-            top: 65%;
-            right: unset;
-            left: 35%;
-
-            transform: translate(-50%, -50%);
+            top: 9rem;
+            left: unset;
+            right: 10.2rem;
         }
 
         &>svg {
@@ -341,6 +342,23 @@
                 width: 5.8rem;
                 height: 7rem;
             }
+        }
+    }
+
+    &__second-star {
+        position: absolute;
+        display: none;
+
+        .icon {
+            width: 9.5rem;
+            height: 9.8rem;
+        }
+
+        @include breakpointMF(laptop) {
+            top: 55%;
+            left: 38%;
+            display: block;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -355,12 +373,12 @@
         pointer-events: none;
 
         @include breakpointMF(tablet) {
-            width: 65%;
+            width: 53%;
         }
 
         @include breakpointMF(laptop) {
-            width: 47%;
-            transform: translateY(-12%);
+            width: 56%;
+            transform: translateY(-20%);
         }
 
         img {

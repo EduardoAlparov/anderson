@@ -3,10 +3,14 @@
 .tarriff-item {
     position: relative;
 
-    padding: 1.2rem 4rem 2.2rem;
+    padding: 1.2rem 4rem 2.3rem;
 
     box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
     border-radius: 0.8rem;
+
+    @include breakpointMF(laptop) {
+        padding: 2.2rem 4rem 3rem;
+    }
 
     &.tarriff-item--latte {
         color: var(--color-bronze, #ee725e);
@@ -38,8 +42,6 @@
 
         width: 100%;
         height: 100%;
-
-        @include breakpointMF(laptop) {}
     }
 
     &__top {
@@ -75,6 +77,10 @@
         @include breakpointMF(laptop) {
             font-size: 2.6rem;
         }
+    }
+
+    &__list {
+        gap: 0.4rem;
     }
 
     &__item {
