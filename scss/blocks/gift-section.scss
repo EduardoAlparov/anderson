@@ -1,12 +1,29 @@
 @use "scss/utils/mixins" as *;
 
 .gift-section {
-    padding-block: 45px 49px;
+    position: relative;
+    padding-block: 85px 89px;
 
     color: var(--color-bronze, #ee725e);
 
     @include breakpointMF(laptop) {
-        padding-block: 5rem 8.4rem;
+        padding-block: 5rem 4.8rem;
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        height: 32rem;
+        background: rgba(254, 240, 152, 1);
+        content: "";
+
+        @include breakpointMF(laptop) {
+            height: 43rem;
+        }
     }
 
     &__body {
@@ -16,20 +33,19 @@
         gap: 0.75rem;
 
         @include breakpointMF(laptop) {
-            flex-direction: row;
-            align-items: flex-end;
+            align-items: stretch;
             gap: 2rem;
             margin-inline: 4rem;
         }
     }
 
     &__image {
+        position: relative;
         flex: 1 1 100%;
-        max-width: 53rem;
+        margin-inline: calc(var(--content-padding) * -1);
 
         @include breakpointMF(laptop) {
-            max-width: unset;
-            flex: 0 0 53rem;
+            margin-inline: 9.3rem;
         }
 
         img {
@@ -56,10 +72,10 @@
     }
 
     &__title {
-        max-width: 32ch;
+        max-width: 19ch;
 
         color: var(--color-bronze, #ee725e);
-        font-size: 15px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 600;
         line-height: 96%;
@@ -67,11 +83,11 @@
 
         @include breakpointMF(laptop) {
             max-width: 35ch;
-            font-size: 2rem;
+            font-size: 2.8rem;
         }
 
         strong {
-            font-weight: 700;
+            font-weight: 900;
         }
     }
 
@@ -80,8 +96,47 @@
         margin-top: 12px;
 
         @include breakpointMF(laptop) {
-            max-width: 26rem;
-            margin-top: 1.7rem;
+            margin-top: 3rem;
+        }
+    }
+
+    &__face {
+        position: absolute;
+        top: -40%;
+        right: -0%;
+
+        @include breakpointMF(laptop) {
+            top: -10%;
+            right: -10%;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+
+            @include breakpointMF(laptop) {
+                width: 21rem;
+                height: 21rem;
+            }
+        }
+    }
+
+    &__back {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 85%;
+            transform: translate(-50%, -50%);
+
+            object-fit: contain;
+            object-position: center;
         }
     }
 }

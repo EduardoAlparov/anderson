@@ -1,0 +1,17 @@
+.map-section {
+    &__container {
+        position: relative;
+        display: block;
+        flex-shrink: 0;
+        width: 100%;
+        aspect-ratio: 1.78 / 1;
+        background: rgba(217, 217, 217, 1);
+    }
+
+    &__title {
+        position: absolute;
+        top: 11.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

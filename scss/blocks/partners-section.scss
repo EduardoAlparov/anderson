@@ -22,6 +22,11 @@
             margin-top: 2rem;
             margin-inline: 10.5rem;
         }
+
+        &.partners-section__list--dense {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {

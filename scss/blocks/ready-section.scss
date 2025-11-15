@@ -1,0 +1,608 @@
+@use "scss/utils/mixins" as *;
+
+.ready-section {
+    padding-block: 33px 51px;
+    color: var(--color-bronze, #ee725e);
+    background-color: var(--color-latte, #fff8e7);
+
+    @include aspectRatio(desktop) {
+        padding-block: 2.4rem 5.8rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 3.5rem;
+
+        margin-top: 3.2rem;
+        padding-inline: 2rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: repeat(4, 0.25fr);
+            gap: 2rem;
+            padding-inline: unset;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.7rem;
+
+        min-height: 36rem;
+        overflow: hidden;
+        padding: 1.4rem 0 0;
+
+        color: rgba(238, 114, 94, 1);
+
+        background: rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        @include breakpointMF(laptop) {
+            gap: 2rem;
+            min-height: 40.5rem;
+        }
+    }
+
+    &__item {
+        &>h4 {
+            width: min-content;
+            font-family: Montserrat;
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        &>button {
+            width: 100%;
+            height: 4.1rem;
+            margin-top: auto;
+
+            border: none;
+            outline: none;
+            background: rgba(254, 240, 152, 1);
+            cursor: pointer;
+
+            color: rgba(238, 114, 94, 1);
+            font-family: Montserrat;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        &.ready-section__item--yellow {
+            background: rgba(254, 240, 152, 1);
+
+            &>h4 {
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &>button {
+                color: rgba(254, 240, 152, 1);
+                background: rgba(238, 114, 94, 1);
+            }
+        }
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        p {
+            margin-right: auto;
+            color: rgba(238, 114, 94, 1);
+            font-family: Montserrat;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 100%;
+            text-align: left;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 21.7rem;
+        height: 14.1rem;
+        margin-top: 2rem;
+        margin-inline: auto;
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+        padding-inline: 1.7rem;
+    }
+
+    &__table-row {
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        color: rgba(238, 114, 94, 1);
+
+        font-family: Montserrat;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: left;
+
+        &::after {
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            content: url("data:image/svg+xml, %3Csvg%20viewBox%3D%220%200%2016%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2216.000000%22%20height%3D%2211.000000%22%20fill%3D%22none%22%20customFrame%3D%22%23000000%22%3E%0A%09%3Cpath%20id%3D%22Vector%22%20d%3D%22M5.47196%208.59911L14.241%200.293987C14.448%200.0979957%2014.6894%200%2014.9653%200C15.2412%200%2015.4827%200.0979957%2015.6896%200.293987C15.8965%200.489978%2016%200.72288%2016%200.992695C16%201.26251%2015.8965%201.49509%2015.6896%201.69042L6.19624%2010.706C5.98931%2010.902%205.74788%2011%205.47196%2011C5.19604%2011%204.95461%2010.902%204.74767%2010.706L0.29847%206.4922C0.091531%206.29621%20-0.00780003%206.06364%200.000477552%205.79448C0.00875513%205.52532%200.116708%205.29241%200.324337%205.09577C0.531967%204.89912%200.77788%204.80113%201.06208%204.80178C1.34627%204.80243%201.59184%204.90043%201.79878%205.09577L5.47196%208.59911Z%22%20fill%3D%22rgb(238%2C114%2C94)%22%20fill-rule%3D%22nonzero%22%20%2F%3E%0A%3C%2Fsvg%3E");
+        }
+
+        &.ready-section__table-row--disabled {
+            opacity: 0.5;
+
+            &::after {
+                content: url("data:image/svg+xml, %3Csvg%20viewBox%3D%220%200%2014%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2214.000000%22%20height%3D%2213.000000%22%20fill%3D%22none%22%20customFrame%3D%22%23000000%22%3E%0A%09%3Cpath%20id%3D%22Vector%22%20d%3D%22M7%207.88403L1.78327%2012.7281C1.58809%2012.9094%201.33967%2013%201.03802%2013C0.736375%2013%200.487959%2012.9094%200.292775%2012.7281C0.0975915%2012.5469%200%2012.3162%200%2012.0361C0%2011.756%200.0975915%2011.5253%200.292775%2011.3441L5.50951%206.5L0.292775%201.65589C0.0975915%201.47465%200%201.24398%200%200.963878C0%200.683777%200.0975915%200.453105%200.292775%200.271863C0.487959%200.0906206%200.736375%200%201.03802%200C1.33967%200%201.58809%200.0906206%201.78327%200.271863L7%205.11597L12.2167%200.271863C12.4119%200.0906206%2012.6603%200%2012.962%200C13.2636%200%2013.512%200.0906206%2013.7072%200.271863C13.9024%200.453105%2014%200.683777%2014%200.963878C14%201.24398%2013.9024%201.47465%2013.7072%201.65589L8.49049%206.5L13.7072%2011.3441C13.9024%2011.5253%2014%2011.756%2014%2012.0361C14%2012.3162%2013.9024%2012.5469%2013.7072%2012.7281C13.512%2012.9094%2013.2636%2013%2012.962%2013C12.6603%2013%2012.4119%2012.9094%2012.2167%2012.7281L7%207.88403Z%22%20fill%3D%22rgb(238%2C114%2C94)%22%20fill-rule%3D%22nonzero%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 4.4rem;
+
+        @include breakpointMF(laptop) {
+            margin-top: 2.8rem;
+        }
+
+        p {
+            color: rgba(238, 114, 94, 1);
+
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 100%;
+            text-align: left;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+
+                @include breakpointMF(laptop) {
+                    margin-bottom: unset;
+                }
+            }
+
+            @include breakpointMF(laptop) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.popover-ready {
+    top: 50%;
+    left: 50%;
+    z-index: 3000;
+
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+
+    border: none;
+
+    &[popover]::backdrop {
+        background-color: rgb(0 0 0 / 0.3);
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem;
+
+        min-width: 320px;
+
+        background: rgba(238, 114, 94, 1);
+
+        @include breakpointMF(laptop) {
+            padding: 6rem 4.8rem 3rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+
+        border-radius: 0px 0px 0px 10px;
+        background: rgba(254, 240, 152, 1);
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        @include breakpointMF(laptop) {
+            width: 8.3rem;
+            height: 8.3rem;
+        }
+
+        &>svg {
+            width: 18px;
+            height: 18px;
+            stroke: rgba(238, 114, 94, 1);
+
+            @include breakpointMF(laptop) {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 3rem;
+        }
+    }
+
+    &__title {
+        width: min-content;
+        color: rgba(254, 240, 152, 1);
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 100%;
+        text-align: left;
+
+        @include breakpointMF(laptop) {
+            font-size: 4.8rem;
+        }
+
+        &.popover-ready__title--mobile {
+            display: block;
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+
+        &.popover-ready__title--desktop {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        width: 100%;
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        transform: translate(30%, -50%);
+        right: 0;
+
+        display: block;
+        width: 200px;
+
+        @include breakpointMF(laptop) {
+            top: 0%;
+            transform: translate(25%, -50%);
+
+            width: 35rem;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 100;
+
+        max-width: 20ch;
+        padding-bottom: 16px;
+
+        color: rgba(255, 255, 255, 1);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: left;
+
+        @include breakpointMF(laptop) {
+            max-width: 40ch;
+            padding-bottom: 3rem;
+            font-size: 2.8rem;
+        }
+
+        &.popover-ready__text--mobile {
+            display: inline-block;
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+
+        &.popover-ready__text--desktop {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: inline-block;
+            }
+        }
+
+        &--full-width {
+            max-width: unset;
+        }
+    }
+
+    &__inputs-grid {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 85%;
+        justify-content: center;
+        grid-template-rows: auto auto 10rem;
+        gap: 9px;
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: 25.5rem 53rem;
+            grid-template-rows: repeat(2, auto);
+            gap: 1.1rem 1.8rem;
+        }
+    }
+
+    &__input-wrapper {
+
+        @include breakpointMF(laptop) {
+            grid-column-start: 1;
+        }
+
+        &>input {
+            width: 100%;
+            height: 42.77px;
+            padding: 1rem;
+
+            color: rgba(238, 114, 94, 1);
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            text-align: center;
+
+            border-radius: 8px;
+            box-shadow: 1px 1px 9px 0px rgba(105, 72, 33, 0.2);
+            background: rgba(255, 255, 255, 1);
+
+            border: none;
+            outline: none;
+
+            @include placeholder {
+                color: rgba(238, 114, 94, 1);
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 100%;
+                text-align: center;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__textarea-wrapper {
+        @include breakpointMF(laptop) {
+            grid-row: 1 / 3;
+            grid-column-start: 2;
+        }
+
+        &>textarea {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            resize: none;
+
+            color: rgba(238, 114, 94, 1);
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            text-align: center;
+
+            border-radius: 8px;
+            box-shadow: 1px 1px 9px 0px rgba(105, 72, 33, 0.2);
+            background: rgba(255, 255, 255, 1);
+
+            border: none;
+            outline: none;
+
+            @include breakpointMF(laptop) {
+                text-align: left;
+            }
+
+            @include placeholder {
+                color: rgba(238, 114, 94, 1);
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 100%;
+                text-align: center;
+                opacity: 0.5;
+
+                @include breakpointMF(laptop) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__sumbit {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: rgba(238, 114, 94, 1);
+        font-family: Montserrat;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 100%;
+        text-align: center;
+
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        @include breakpointMF(laptop) {
+            left: unset;
+            bottom: 1.1rem;
+            right: 1.7rem;
+
+            transform: unset;
+        }
+
+        &.popover-ready__sumbit--static {
+            position: static;
+            transform: unset;
+        }
+    }
+
+    &__star {
+
+        &.intro-section__star {
+            top: 7rem;
+            left: unset;
+            right: 25.2rem;
+
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 5rem;
+
+        @include breakpointMF(laptop) {
+            flex-direction: row;
+            gap: 4rem;
+            align-items: stretch;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+
+        min-width: 22.5rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.2rem;
+            min-width: 28rem;
+        }
+    }
+
+    &.popover-ready--olive {
+
+        .popover-ready__body {
+            background: rgba(186, 189, 113, 1);
+        }
+
+        .popover-ready__input-wrapper {
+            &>input {
+                color: rgba(186, 189, 113, 1);
+
+                @include placeholder {
+                    color: rgba(186, 189, 113, 1);
+                }
+            }
+        }
+
+        .popover-ready__textarea-wrapper {
+            &>textarea {
+                color: rgba(186, 189, 113, 1);
+
+                @include placeholder {
+                    color: rgba(186, 189, 113, 1);
+                }
+            }
+        }
+
+        .popover-ready__sumbit {
+            color: rgba(186, 189, 113, 1);
+        }
+    }
+
+    &.popover-ready--yellow {
+        color: rgba(238, 114, 94, 1);
+
+
+        .popover-ready__body {
+            background: rgba(254, 240, 152, 1);
+        }
+
+        .popover-ready__close {
+            background: rgba(238, 114, 94, 1);
+
+            &>svg {
+                stroke: rgba(254, 240, 152, 1);
+            }
+        }
+
+        .popover-ready__title,
+        .popover-ready__text {
+            color: rgba(238, 114, 94, 1);
+        }
+
+        .popover-ready__input-wrapper {
+            &>input {
+                color: rgba(238, 114, 94, 1);
+
+                @include placeholder {
+                    color: rgba(238, 114, 94, 1);
+                }
+            }
+        }
+
+        .popover-ready__textarea-wrapper {
+            &>textarea {
+                color: rgba(238, 114, 94, 1);
+
+                @include placeholder {
+                    olor: rgba(238, 114, 94, 1);
+                }
+            }
+        }
+
+        .popover-ready__sumbit {
+            color: rgba(238, 114, 94, 1);
+        }
+    }
+}

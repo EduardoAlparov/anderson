@@ -1,0 +1,147 @@
+@use "scss/utils/mixins" as *;
+
+.links-sections {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+
+        height: 49rem;
+
+        background: rgba(250, 220, 220, 1);
+        content: "";
+
+        @include breakpointMF(laptop) {
+            height: 31.4rem;
+        }
+    }
+
+    &__site-container {
+        padding-block: 17.5rem 14.3rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2.2rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: repeat(4, 0.25fr);
+            gap: 2rem;
+        }
+
+        &:has(.links-sections__link:hover) {
+            .links-sections__link {
+                opacity: 0.5;
+            }
+        }
+
+        &>li {
+            aspect-ratio: 0.987;
+
+            @include breakpointMF(laptop) {
+                aspect-ratio: unset;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        height: 100%;
+        overflow: hidden;
+        text-decoration: none;
+
+        border-radius: 1rem;
+        background: rgba(238, 114, 94, 1);
+        transform-origin: center;
+
+        transition-duration: 0.3s;
+        transition-property: opacity, transform;
+        transition-timing-function: ease;
+
+        &:hover {
+            opacity: 1 !important;
+            transform: scale(1.15);
+        }
+    }
+
+    &__image {
+        overflow: hidden;
+
+        flex: 1 1 21.9rem;
+
+        @include breakpointMF(laptop) {
+            flex: 1 1 36.7rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+
+        flex: 0 1 4.6rem;
+        padding: 0.6rem 1.7rem;
+
+        @include breakpointMF(laptop) {
+            justify-content: flex-start;
+
+            flex: 0 1 6.7rem;
+            padding: 1.5rem 1.2rem;
+        }
+
+        p {
+            width: min-content;
+            color: rgba(255, 255, 255, 1);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            @include breakpointMF(laptop) {
+                text-align: left;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: grid;
+        place-items: center;
+
+        width: 29px;
+        height: 29px;
+
+        border-radius: 0px 0px 0px 10px;
+        background: rgba(186, 189, 113, 1);
+
+        &>svg {
+            display: block;
+            width: 0.8rem;
+            height: 1.5rem;
+        }
+    }
+}

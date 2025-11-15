@@ -28,7 +28,7 @@
         line-height: 96%;
 
         @include breakpointMF(laptop) {
-            font-size: 1.4rem;
+            font-size: 2rem;
         }
 
         &.offer-section__subtitle--light {
@@ -49,7 +49,7 @@
             font-size: 1.6rem;
 
             @include breakpointMF(laptop) {
-                font-size: 2.1rem;
+                font-size: 2rem;
             }
         }
     }
@@ -66,7 +66,7 @@
         @include breakpointMF(laptop) {
             margin-top: 2.5rem;
             margin-inline: 21.8rem;
-            gap: 1.6rem 3rem;
+            gap: 2.4rem 2rem;
         }
     }
 
@@ -193,6 +193,10 @@
 
         @include breakpointMF(laptop) {
             margin-top: unset;
+        }
+
+        &[disabled] {
+            display: none;
         }
     }
 

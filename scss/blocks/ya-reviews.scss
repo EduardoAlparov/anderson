@@ -1,0 +1,131 @@
+@use "scss/utils/mixins" as *;
+
+.ya-reviews {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-block: 33px 51px;
+
+    color: var(--color-bronze, #ee725e);
+
+    @include breakpointMF(laptop) {
+        padding-block: 2.4rem 5.8rem;
+    }
+
+    &__heading {
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        margin-inline: unset;
+
+        @include breakpointMF(laptop) {
+            margin-inline: auto;
+        }
+    }
+
+    &__subtitle {
+        max-width: 21ch;
+        margin-top: 15px;
+
+        @include breakpointMF(laptop) {
+            max-width: unset;
+            margin-top: unset;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: max-content;
+        padding-block: 2.5rem;
+
+        @include breakpointMF(laptop) {
+            padding-block: 8rem;
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: baseline;
+        gap: 2ch;
+
+
+        span {
+            color: rgba(186, 189, 113, 1);
+
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 96%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            @include breakpointMF(laptop) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__rating-value,
+    &__rating-total {
+        color: rgba(186, 189, 113, 1);
+
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 96%;
+        letter-spacing: 0%;
+        text-align: center;
+
+        @include breakpointMF(laptop) {
+            font-size: 6.5rem;
+        }
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        @include breakpointMF(laptop) {
+            gap: 0.5rem;
+        }
+    }
+
+    &__star {
+        flex-shrink: 0;
+
+        svg {
+            display: block;
+            width: 0.9rem;
+            height: 0.9rem;
+
+            @include breakpointMF(laptop) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+
+    &__logo {
+        width: 91px;
+        height: 24px;
+
+        @include breakpointMF(laptop) {
+            width: 26.7rem;
+            height: 7.2rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

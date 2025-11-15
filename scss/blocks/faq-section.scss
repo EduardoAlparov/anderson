@@ -15,10 +15,10 @@
     &__body {
         display: flex;
         justify-content: center;
-        margin-top: 13px;
+        margin-top: 18px;
 
         @include breakpointMF(laptop) {
-            margin-top: 1rem;
+            margin-top: 4.5rem;
         }
     }
 

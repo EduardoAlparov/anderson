@@ -15,7 +15,7 @@
         margin-top: 17px;
 
         @include aspectRatio(desktop) {
-            margin-top: 2.1rem;
+            margin-top: 4.1rem;
         }
     }
 
@@ -36,7 +36,7 @@
             padding: 12px 28px 29px;
 
             @include aspectRatio(desktop) {
-                margin-top: 3.2rem;
+                margin-top: 4.1rem;
                 padding: 1.2rem 3rem 4.6rem;
             }
         }
@@ -97,6 +97,10 @@
         background-color: #939653;
         box-shadow: 2px 2px 6px rgba(97, 61, 25, 0.25);
         border-radius: 0.8rem;
+
+        border: none;
+        outline: none;
+        cursor: pointer;
 
         @include breakpointMF(laptop) {
             min-width: 37rem;

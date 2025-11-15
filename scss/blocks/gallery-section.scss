@@ -1,9 +1,12 @@
 @use "scss/utils/mixins" as *;
 
 .gallery-section {
-    padding-block: 49px 26px;
+    position: relative;
+    padding-block: 49px 80px;
+    overflow: hidden;
 
     color: var(--color-bronze, #ee725e);
+    background: rgba(255, 248, 231, 1);
 
     @include breakpointMF(laptop) {
         padding-block: 6.8rem 2.6rem;
@@ -17,14 +20,10 @@
         width: max-content;
         margin-top: 1.5rem;
         margin-inline: auto;
-        padding: 0.4rem;
-
-        background-color: var(--color-latte, #fff8e7);
-        border-radius: 3rem;
-        box-shadow: 1px 1px 9px 0 rgba(0, 0, 0, 0.25);
 
         @include breakpointMF(laptop) {
-            margin-top: 2.5rem;
+            margin-top: 3.5rem;
+            margin-inline: unset;
         }
 
         &>input {
@@ -45,39 +44,76 @@
         display: grid;
         place-items: center;
 
-        padding: 0.8rem 4rem;
-        height: 2.6rem;
+        width: 13.8rem;
+        height: 2.4rem;
+        padding: 0.4rem 2rem 0.7rem;
 
-        color: var(--color-olive, #babd71);
-        font-size: 1.2rem;
-        font-style: normal;
+        color: rgba(238, 114, 94, 1);
+        font-family: Montserrat;
+        font-size: 1.4rem;
         font-weight: 600;
-        line-height: 96%;
+        line-height: 82%;
+        letter-spacing: 0%;
         text-align: center;
 
-        background-color: transparent;
-        border-radius: 3rem;
+        box-sizing: border-box;
+        border: 2px solid rgba(238, 114, 94, 1);
+        border-radius: 10px 0px 0px 10px;
+        background: rgba(255, 255, 255, 1);
         cursor: pointer;
         transition: all 0.3s ease;
 
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+    }
+
+    &__body {
         @include breakpointMF(laptop) {
-            height: 4rem;
-            padding: 1rem 6rem;
-            font-size: 1.6rem;
+            position: relative;
         }
     }
 
-    &__list {
-        display: none;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-
-        margin-top: 2rem;
+    &__heading-wrapper {
+        margin-bottom: 2.5rem;
 
         @include breakpointMF(laptop) {
-            gap: 1.2rem;
+            position: absolute;
+            z-index: 100;
+
+            display: grid;
+            grid-template-columns: repeat(3, calc(1fr / 3));
+            gap: 2rem;
+
+            width: 100%;
+            margin-bottom: unset;
+        }
+    }
+
+    &__heading {
+        @include breakpointMF(laptop) {
+            grid-row: 1 / 2;
+            grid-column: 2 / 4;
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        text-align: left;
+        margin-inline: unset;
+    }
+
+    &__list {
+        position: relative;
+
+        display: none;
+        grid-template-columns: 100%;
+        gap: 2.6rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: repeat(3, calc(1fr / 3));
+            gap: 2rem;
         }
     }
 
@@ -85,22 +121,60 @@
         display: grid;
         place-items: center;
 
-        @include breakpointMF(laptop) {
-            flex: 0 1 calc(100% / 3 - (1.2rem * 2 / 3));
+        &.gallery-section__item--last {
+            @include breakpointMF(laptop) {
+                grid-row-end: 5;
+                grid-column: 2 / 3;
+            }
+        }
+
+        &.gallery-section__item--heading-cell {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+
+                grid-row: 1 / 2;
+                grid-column: 2 / 4;
+                pointer-events: none;
+            }
+        }
+
+        &.gallery-section__item--empty-left {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+
+                grid-column: 1 / 2;
+            }
+
+            img {
+                position: absolute;
+            }
+        }
+
+        &.gallery-section__item--empty-right {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+
+                grid-column: 3 / 4;
+            }
         }
     }
 
     &__carousel-wrapper {
         position: relative;
 
-        height: 180px;
-        aspect-ratio: 1.51 / 1;
+        width: 100%;
+        aspect-ratio: 1.66 / 1;
 
         background-color: var(--color-latte, #fff8e7);
         box-shadow: 1px 1px 9px 0 rgba(105, 72, 33, 0.20);
 
         @include breakpointMF(laptop) {
-            width: 100%;
             height: unset;
             overflow: hidden;
         }
@@ -122,14 +196,17 @@
 
     &__swiper-btn {
         position: absolute;
-        top: 50%;
+        top: 0;
         z-index: 200;
 
-        flex-shrink: 0;
-        transform: translateY(-50%);
+        display: grid;
+        place-items: center;
 
-        background-color: transparent;
-        border-radius: 100%;
+        flex-shrink: 0;
+        width: 17px;
+        height: 17px;
+
+        background: rgba(186, 189, 113, 1);
         border: none;
         outline: none;
         user-select: none;
@@ -138,38 +215,34 @@
         cursor: pointer;
 
         @include breakpointMF(laptop) {
-            background-color: rgba(255, 248, 231, 0.50);
+            width: 2rem;
+            height: 2rem;
         }
 
         &>.icon {
             display: block;
-            width: 3.3rem;
-            height: 3.3rem;
+            width: 17px;
+            height: 17px;
 
-            stroke: var(--color-bronze, #ee725e);
+            stroke: var(--color-latte, #fff8e7);
             transition: stroke 0.3s ease;
 
             @include breakpointMF(laptop) {
+                width: 2rem;
+                height: 2rem;
                 stroke: var(--color-latte, #fff8e7);
             }
         }
 
         &.gallery-section__swiper-prev {
-            right: 100%;
+            left: 0;
 
-            @include breakpointMF(laptop) {
-                left: 0.3rem;
-                right: unset;
-            }
+            border-radius: 0 0px 1rem 0;
         }
 
         &.gallery-section__swiper-next {
-            left: 100%;
-
-            @include breakpointMF(laptop) {
-                right: 0.3rem;
-                left: unset;
-            }
+            right: 0;
+            border-radius: 0px 0 0px 1rem;
 
             &>.icon {
                 transform: rotate(180deg);
@@ -177,7 +250,7 @@
         }
 
         &:hover {
-            background-color: rgba(255, 248, 231, 0.80);
+            background-color: rgba(255, 248, 231, 1);
 
             &>.icon {
                 stroke: var(--color-bronze, #ee725e);
@@ -199,18 +272,61 @@
         line-height: 96%;
         text-align: center;
     }
+
+    &__input-hidden {
+        @include visuallyHidden();
+    }
+
+    &__bread {
+        position: absolute;
+        bottom: -2rem;
+        right: 0rem;
+
+        width: 200px;
+
+        @include breakpointMF(laptop) {
+            bottom: -2rem;
+            right: 5rem;
+
+            width: 400px;
+        }
+    }
+
+    &__star {
+        &.intro-section__star {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                top: 14rem;
+                right: 15rem;
+
+                display: block;
+            }
+        }
+    }
 }
 
-.gallery-section__navigation {
+.gallery-section__site-container {
     &:has(input[type="radio"]#gallery-navigation-photo:checked) {
-        &~.gallery-section__list--photos {
-            display: flex;
+        .gallery-section__list--photos {
+            display: grid;
+        }
+
+        label[for="gallery-navigation-photo"] {
+            color: var(--color-latte, #fff8e7);
+            background-color: var(--color-bronze, #ee725e);
         }
     }
 
     &:has(input[type="radio"]#gallery-navigation-video:checked) {
-        &~.gallery-section__list--video {
-            display: flex;
+        .gallery-section__list--video {
+            display: grid;
+        }
+
+
+        label[for="gallery-navigation-video"] {
+            color: var(--color-latte, #fff8e7);
+            background-color: var(--color-bronze, #ee725e);
         }
     }
 }
