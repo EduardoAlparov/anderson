@@ -20,6 +20,7 @@
         align-items: stretch;
         flex-grow: 1;
 
+        min-height: 100vh;
         padding-block: 0 4rem;
 
         @include breakpointMF(laptop) {
@@ -75,7 +76,7 @@
 
     &__form {
         grid-area: is-form;
-        justify-self: center;
+        justify-self: stretch;
 
         display: flex;
         flex-direction: column;
@@ -162,7 +163,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 96%;
-        text-align: center;
+        // text-align: center;
         white-space: nowrap;
 
 
@@ -221,7 +222,7 @@
 
     &__star {
         top: 3rem;
-        left: 51%;
+        right: 3rem;
 
         .icon-mobile {
             @include breakpointMF(laptop) {
@@ -258,14 +259,14 @@
         top: 43%;
         right: 0;
 
-        width: 60%;
+        width: 85%;
         aspect-ratio: 1 / 0.82;
         transform: translateY(-50%);
 
         pointer-events: none;
 
         @include breakpointMF(tablet) {
-            width: 53%;
+            width: 85%;
         }
 
         @include breakpointMF(laptop) {
@@ -286,13 +287,28 @@
     }
 
     &__bread {
-        top: 40%;
-        left: -20%;
+        top: 50%;
+        left: -5rem;
+
+        transform: rotate(-25deg);
+
+        @include breakpointMF(laptop) {
+            top: 40%;
+            left: -20%;
+
+            transform: unset;
+        }
 
         svg {
             display: block;
-            width: 65rem;
-            height: 31.5rem;
+
+            width: 18.2rem;
+            height: 19.5rem;
+
+            @include breakpointMF(laptop) {
+                width: 65rem;
+                height: 31.5rem;
+            }
         }
     }
 }

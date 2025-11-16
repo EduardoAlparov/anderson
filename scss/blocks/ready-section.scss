@@ -9,6 +9,15 @@
         padding-block: 2.4rem 5.8rem;
     }
 
+    &__title,
+    &__subtitle {
+        text-align: left;
+
+        @include breakpointMF(laptop) {
+            text-align: center;
+        }
+    }
+
     &__list {
         display: grid;
         grid-template-columns: 100%;
@@ -260,6 +269,12 @@
         @include breakpointMF(laptop) {
             gap: 3rem;
         }
+
+        &.popover-ready__heading--pt {
+            @include breakpointMF(laptop) {
+                padding-top: 9rem;
+            }
+        }
     }
 
     &__title {
@@ -404,6 +419,16 @@
                 line-height: 100%;
                 text-align: center;
                 opacity: 0.5;
+
+                @include breakpointMF(laptop) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            @include breakpointMF(laptop) {
+                height: 7.1rem;
+                padding: 1rem;
+                font-size: 2.4rem;
             }
         }
     }
@@ -435,8 +460,11 @@
             outline: none;
 
             @include breakpointMF(laptop) {
+                padding: 1.2rem 1.7rem;
+                font-size: 2.4rem;
                 text-align: left;
             }
+
 
             @include placeholder {
                 color: rgba(238, 114, 94, 1);
@@ -448,6 +476,7 @@
                 opacity: 0.5;
 
                 @include breakpointMF(laptop) {
+                    font-size: 2.4rem;
                     text-align: left;
                 }
             }
@@ -478,11 +507,21 @@
             right: 1.7rem;
 
             transform: unset;
+            font-size: 1.8rem;
         }
 
         &.popover-ready__sumbit--static {
             position: static;
             transform: unset;
+        }
+
+        &.popover-ready__sumbit--bigger {
+            margin-inline: auto;
+
+            @include breakpointMF(laptop) {
+                font-size: 2.8rem;
+                margin-inline: unset;
+            }
         }
     }
 
@@ -526,6 +565,126 @@
         @include breakpointMF(laptop) {
             gap: 2.2rem;
             min-width: 28rem;
+        }
+    }
+
+    &__carousel {
+        position: relative;
+
+        width: 27.9rem;
+        height: 27.9rem;
+        display: block;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        background-color: rgba(186, 189, 113, 0.1);
+        border-radius: 1rem;
+
+        @include breakpointMF(laptop) {
+            width: 63.7rem;
+            height: 63.7rem;
+
+            margin-left: 4.8rem;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            height: 100%;
+
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 300;
+
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+
+    &__slider-button {
+        display: grid;
+        place-items: center;
+
+        width: 23px;
+        height: 23px;
+        flex-shrink: 0;
+
+        background-color: rgba(186, 189, 113, 1);
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        transition: background 0.3s ease;
+
+        &:not(.swiper-button-disabled, [disabled]) {
+            &:active {
+                background-color: rgba(238, 114, 94, 1);
+            }
+
+            &:hover {
+                .icon {
+                    transform: scale(1.1);
+
+                    &.icon--rotate {
+                        transform: rotate(180deg) scale(1.1);
+                    }
+                }
+            }
+        }
+
+        &.swiper-button-disabled,
+        &[disabled] {
+            background-color: rgba(238, 114, 94, 1);
+        }
+
+        @include breakpointMF(laptop) {
+            width: 5.4rem;
+            height: 5.4rem;
+        }
+
+        &--prev {
+            border-radius: 10px 0px 0px 0px;
+        }
+
+        &--next {
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        .icon {
+            height: 1.5rem;
+            width: 0.6rem;
+
+            transform-origin: center;
+            transition: transform 0.3s ease;
+
+            @include breakpointMF(laptop) {
+                height: 2.8rem;
+                width: 1.6rem;
+            }
+
+            &.icon--rotate {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        img {
+            flex-shrink: 0;
+            display: block;
+            width: 100%;
+
+            object-fit: cover;
+            object-position: center;
         }
     }
 
@@ -602,6 +761,32 @@
         }
 
         .popover-ready__sumbit {
+            color: rgba(238, 114, 94, 1);
+        }
+    }
+
+    &.popover-ready--light {
+        color: rgba(238, 114, 94, 1);
+
+
+        .popover-ready__body {
+            background: rgba(255, 248, 231, 1);
+
+            @include breakpointMF(laptop) {
+                padding: 4rem 3.8rem;
+            }
+        }
+
+
+        .popover-ready__row {
+
+            @include breakpointMF(laptop) {
+                padding-top: 0;
+            }
+        }
+
+        .popover-ready__title,
+        .popover-ready__text {
             color: rgba(238, 114, 94, 1);
         }
     }

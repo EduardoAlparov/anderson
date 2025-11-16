@@ -113,9 +113,19 @@
 
     &__title {
         margin-bottom: 0.5rem;
+        margin-inline: unset;
 
         @include breakpointMF(laptop) {
             margin-bottom: 0.8rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__subtitle {
+        text-align: left;
+
+        @include breakpointMF(laptop) {
+            text-align: center;
         }
     }
 }

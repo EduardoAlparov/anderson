@@ -3,17 +3,13 @@
 .lead-section {
     position: relative;
 
-    &__site-container {
-        position: relative;
-        z-index: 300;
-    }
-
     &__body {
-        position: relative;
-        overflow: hidden;
-        padding-block: 18rem 4.5rem;
+        padding-block: 3rem 4.5rem;
 
         @include breakpointMF(laptop) {
+            position: relative;
+            z-index: 300;
+            overflow: hidden;
             margin-left: 45%;
             padding-block: 8.1rem 14.4rem;
         }
@@ -21,23 +17,19 @@
 
     &__title {
         width: min-content;
-        margin-bottom: 6px;
+        margin-bottom: 2rem;
 
         color: var(--color-bronze, #ee725e);
         font-family: Montserrat;
-        font-size: 20px;
+        font-size: 33px;
         font-style: normal;
         font-weight: 700;
         line-height: 96%;
+        text-align: left;
 
         @include breakpointMF(tablet) {
-            width: 100%;
-            text-align: center;
-        }
-
-        @include breakpointMF(laptop) {
             margin-bottom: 4rem;
-            text-align: left;
+
             font-size: 6.5rem;
         }
     }
@@ -50,12 +42,10 @@
         max-width: 100%;
 
         @include breakpointMF(tablet) {
-            max-width: 35rem;
-            margin-inline: auto;
+            max-width: 60rem;
         }
 
         @include breakpointMF(laptop) {
-            max-width: 60rem;
             margin-inline: unset;
         }
     }
@@ -89,7 +79,7 @@
             width: 4rem;
             height: 3.4rem;
 
-            @include breakpointMF(laptop) {
+            @include breakpointMF(tablet) {
                 width: 8.6rem;
                 height: 7.5rem;
             }
@@ -105,19 +95,26 @@
         font-weight: 700;
         line-height: 96%;
 
-        @include breakpointMF(laptop) {
+        @include breakpointMF(tablet) {
             font-size: 3.5rem;
         }
     }
 
     &__picture {
+        width: 80%;
+        margin-inline: auto;
+        margin-bottom: 4.6rem;
+
         @include breakpointMF(laptop) {
             position: absolute;
             left: 0;
             bottom: 0;
+
             width: 42%;
             max-height: 100%;
             overflow: hidden;
+            margin-inline: unset;
+            margin-bottom: unset;
         }
 
         img {
@@ -132,14 +129,32 @@
     &__image {
         position: absolute;
         bottom: 0;
-        left: 20%;
+        left: 0;
 
-        transform: translate(0, 50%);
+        width: 40%;
+
+        transform: translate(-15%, 35%);
+
+        @include breakpointMF(laptop) {
+            bottom: 0;
+            left: 20%;
+
+            width: auto;
+            transform: translate(0, 50%);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: contain;
+            object-position: center;
+        }
     }
 
     &__background {
         position: absolute;
-        top: 0;
+        top: 8%;
         right: 0;
         bottom: 0;
         z-index: 100;
@@ -147,12 +162,13 @@
         @include breakpointMF(laptop) {
             top: 5rem;
             right: 0;
-            bottom: -10rem;
+            bottom: -3rem;
         }
 
         img {
             display: block;
             width: 100%;
+            min-height: 100%;
             margin-inline: auto;
 
             object-fit: contain;

@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAABUAAAAAAAAAAAAAAAAAAAAJAAAADQAAAAcAAAAAAAAAFQAAAAAAAAACAAAAIgAAABUAAAAAAAAAAAAAAAYNERqHDRIYcQAAAAAAAAAAAAAAPQsMEooMER5lAAAAAAkJDokKDxphAAAAEAwPGKYRGCa/AAAAAAAAAAAAAAAAExkmjRQdKsUAAAAAAAAAABAQEFwQFiXOEBQifwAAAAYWHSvJCA0emAAAADAZITLfFRortgAAAAAAAAAAAAAAAA4VIZAXHyvGAAAAIQAAAAAWGR5cDRQjyhIXIowAAAAnGyMy2AkKFY0LCABZFyA06xceMI8AAAAAAAAAAAAAAAAOFSGQFx0oyAAAACUAAAAAEhIPURcfL84QFyN6AAAAWRggMOIGCBB9Fx0slhYcLcQTHDB0AAAAAAAAAAAAAAAGDBUgjB0kMsIAAABgBwoOxQcAAEYXIC/XDREedgUAAFwZITL7BQsVhBQcK6wYIDLFAAAAGwAAAAAAAAAAAAAAEhEZJKAcIjC6CwsLtBEZK/8AAACLFh4u2Q8UJHEAAABBHyg8/Q4TIOQWGietFR8wswAAAAAAAAAAAAAAAAAAAA8YICylGx8rux8nMKoWJkD/AgcUxhcdLNcLEB5sAAAAACAnOOERGCj6EBkt5xQbJHEAAAAAAAAAAAAAAAAAAAANGyMupRkdJ8EAAAbAJDFH8AwZM/MVGiXgDxYjZQAAABkaHyq5GiI49BclPPkKEySNAAAAAAAAAAAAAAAAAAAABBcdJK8NDhbVDREbwhsjMcobJjz9DhQl6h8nMmEAAAAkEBQfvR8mOqUjKzvTExst6AAAABkAAAAAAAAAAAAAACANDxXAFRwr+BcfK8YACxtvJjBC1RYgM/kRDxFlAAAAIRYdLc8QFiN7Iyw8kR4oOtcQFSS+AAAAAAAAAAAAAAARFh0n7BATHtocJjfrAAAAACozQHMaIzThDhYnoAAAAAATGinOFR0uhAAAAAAbJDSuGSEy1Q4WKmcAAAAAAAAAAC43RqoTGifKIis5jgAAAAAAAAAAIik3nBYcJn8AAAAAExglkRYeLFwAAAAA/wAAABohMJkVHChsAAAAAAAAAAAAAAAAOkVFFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AADijAAAYgwAAmAMAAIgDAACIAwAAAAMAAAAHAAAAhwAAAAcAAAADAAAAAwAACJEAAIyZAADf/wAA//8AAA==" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aндерсон</title>
-  <script type="module" crossorigin src="./assets/index-19ca3cc1.js"></script>
-  <link rel="stylesheet" href="./assets/index-6bf28cd5.css">
+  <script type="module" crossorigin src="./assets/index-28773d8c.js"></script>
+  <link rel="stylesheet" href="./assets/index-31085e9d.css">
 </head>
 <body class="preload">
     <main class="page-wrapper font-size-modifaer">
@@ -143,7 +143,7 @@
             <div class="links-sections__site-container">
                 <ul class="links-sections__list">
                     <li>
-                        <a href="#" class="links-sections__link">
+                        <div class="links-sections__link">
                             <div class="links-sections__image">
                                 <img src="./assets/image-1-38b4ba0b.png" alt="">
                             </div>
@@ -158,10 +158,12 @@
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                            <button popovertarget="links-popup-item-1" type="button"
+                                class="links-sections__pseudo-btn"></button>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="links-sections__link">
+                        <div class="links-sections__link">
                             <div class="links-sections__image">
                                 <img src="./assets/image-2-26138ff3.png" alt="">
                             </div>
@@ -176,10 +178,12 @@
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                            <button popovertarget="links-popup-item-1" type="button"
+                                class="links-sections__pseudo-btn"></button>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="links-sections__link">
+                        <div class="links-sections__link">
                             <div class="links-sections__image">
                                 <img src="./assets/image-3-a7135083.png" alt="">
                             </div>
@@ -194,10 +198,12 @@
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                            <button popovertarget="links-popup-item-1" type="button"
+                                class="links-sections__pseudo-btn"></button>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="links-sections__link">
+                        <div class="links-sections__link">
                             <div class="links-sections__image">
                                 <img src="./assets/image-4-cdaf3a7e.png" alt="">
                             </div>
@@ -212,9 +218,81 @@
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                            <button popovertarget="links-popup-item-1" type="button"
+                                class="links-sections__pseudo-btn"></button>
+                        </div>
                     </li>
                 </ul>
+            </div>
+
+            <div data-popup="links-popup-item-1" id="links-popup-item-1" popover
+                class="popover-ready popover-ready--light">
+                <div class="popover-ready__body">
+                    <button type="button" class="popover-ready__close" popovertarget="links-popup-item-1"
+                        popovertargetaction="hide">
+                        <svg aria-hidden="true" class="">
+                            <use xlink:href="./assets/close-aa8f7b01.svg#close-popup"></use>
+                        </svg>
+                    </button>
+
+                    <div class="popover-ready__row">
+                        <div class="popover-ready__heading popover-ready__heading--pt">
+                            <h3 class="popover-ready__title">
+                                Анимационная<br> программа
+                            </h3>
+
+                            <div class="popover-ready__subtitle">
+                                <p
+                                    class="popover-ready__text popover-ready__text--smaller popover-ready__text--full-width">
+                                    Более 50 анимационных программ от «Андерсона» — для тех, кто любит веселиться,
+                                    смеяться и мечтать!<br>
+                                </p>
+                                <p
+                                    class="popover-ready__text popover-ready__text--smaller popover-ready__text--full-width">
+                                    Наши герои, квесты и шоу подойдут детям любого возраста и
+                                    характера. Мы знаем, как превратить обычный день рождения в настоящее приключение.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="popover-ready__sumbit popover-ready__sumbit--static popover-ready__sumbit--bigger">
+                                заказать звонок
+                            </button>
+                        </div>
+
+                        <div class="popover-ready__carousel">
+                            <div class="popover-ready__swiper swiper js-popup-swiper">
+                                <ul class="popover-ready__swiper-wrapper swiper-wrapper">
+                                    <li class="popover-ready__swiper-slide swiper-slide">
+                                        <img src="./assets/prog-f252698c.png" alt="">
+                                    </li>
+                                    <li class="popover-ready__swiper-slide swiper-slide">
+                                        <img src="./assets/prog-f252698c.png" alt="">
+                                    </li>
+                                    <li class="popover-ready__swiper-slide swiper-slide">
+                                        <img src="./assets/prog-f252698c.png" alt="">
+                                    </li>
+                                </ul>
+
+                                <div class="popover-ready__navigation">
+                                    <button type="button"
+                                        class="popover-ready__slider-button popover-ready__slider-button--prev">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="./assets/prev-c94189de.svg#slide-prev"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button"
+                                        class="popover-ready__slider-button popover-ready__slider-button--next">
+                                        <svg aria-hidden="true" class="icon icon--rotate">
+                                            <use xlink:href="./assets/prev-c94189de.svg#slide-prev"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -505,10 +583,11 @@
         <section class="ready-section section">
             <div class="ready-section__site-container">
                 <div class="ready-section__heading offer-section__heading faq-section__heading">
-                    <h2 class="working-section__title formats-section__title formats-section__title--red">
+                    <h2
+                        class="ready-section__title working-section__title formats-section__title formats-section__title--red">
                         Готовые предложения
                     </h2>
-                    <p class="offer-section__subtitle offer-section__subtitle--olive">
+                    <p class="ready-section__subtitle offer-section__subtitle offer-section__subtitle--olive">
                         Выберите подходящий вариант или создадим индивидуальную программу
                     </p>
                 </div>
@@ -919,7 +998,7 @@
         <section class="working-section section">
             <div class="working-section__site-container">
                 <div class="working-section__heading offer-section__heading faq-section__heading">
-                    <h2 class="working-section__title formats-section__title formats-section__title--red">
+                    <h2 class="formats-section__title formats-section__title--red">
                         Как&nbsp;мы&nbsp;работаем
                     </h2>
                     <p class="offer-section__subtitle offer-section__subtitle--red">

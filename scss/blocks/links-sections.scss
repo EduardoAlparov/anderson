@@ -36,7 +36,9 @@
 
         &:has(.links-sections__link:hover) {
             .links-sections__link {
-                opacity: 0.5;
+                @include breakpointMF(laptop) {
+                    opacity: 0.5;
+                }
             }
         }
 
@@ -50,6 +52,8 @@
     }
 
     &__link {
+        position: relative;
+
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -65,11 +69,22 @@
         transition-duration: 0.3s;
         transition-property: opacity, transform;
         transition-timing-function: ease;
+        cursor: pointer;
 
-        &:hover {
-            opacity: 1 !important;
-            transform: scale(1.15);
+        @include breakpointMF(laptop) {
+            &:hover {
+                opacity: 1 !important;
+                transform: scale(1.15);
+            }
         }
+    }
+
+    &__pseudo-btn {
+        position: absolute;
+        inset: 0;
+
+        opacity: 0;
+        cursor: pointer;
     }
 
     &__image {
